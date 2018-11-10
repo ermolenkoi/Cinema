@@ -1,0 +1,11 @@
+CREATE TABLE films (
+film_id SERIAL PRIMARY KEY,
+film_name VARCHAR(20) NOT NULL,
+film_type VARCHAR(20) NOT NULL,
+film_duration int NOT NULL
+);
+
+INSERT INTO films (film_name, film_type, film_duration) VALUES ('Brother', 'VIDEO', 90);
+INSERT INTO films (film_name, film_type, film_duration) VALUES ('Brother 2', 'VIDEO', 85);
+
+SELECT * FROM films;
