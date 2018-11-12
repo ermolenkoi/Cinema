@@ -4,31 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/test/java/TestDbConnection.java" line="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d27c7b00-cd0e-400e-b4ea-bf60afff8ab4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/FilmDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/FilmDaoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/postgresql_42_2_5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/postgresql_42_2_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/createTables" beforeDir="false" afterPath="$PROJECT_DIR$/db/createTables" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/FilmDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/FilmDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/FilmDbDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/SimpleConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/SimpleConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfases/FilmService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfases/FilmService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Film.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/TypeVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/TypeVideo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/FilmServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/FilmServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestDbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestDbConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/FilmDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/FilmDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/FilmDbDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/FilmDbDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/SimpleConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/SimpleConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/interfases/FilmService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/interfases/FilmService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Film.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Film.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/TypeVideo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/TypeVideo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/FilmServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/FilmServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/TestDbConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/TestDbConnection.class" afterDir="false" />
-    </list>
+    <list default="true" id="d27c7b00-cd0e-400e-b4ea-bf60afff8ab4" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -179,8 +155,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+            <state relative-caret-position="187">
+              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -431,7 +407,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542026321137" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542026685740" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../site" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -516,8 +492,7 @@
     <option name="totallyTimeSpent" value="1156000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15778251" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -756,8 +731,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        <state relative-caret-position="187">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
         </state>
       </provider>
     </entry>
