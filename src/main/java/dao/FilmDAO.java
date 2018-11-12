@@ -1,5 +1,6 @@
 package dao;
 
+import exceptions.FilmDaoException;
 import model.Film;
 import model.TypeVideo;
 
@@ -8,11 +9,11 @@ import java.util.List;
 
 public interface FilmDAO {
     //добавить новый фильм
-    int addFilm(Film film);
+    void addFilm(Film film) throws FilmDaoException;
     //удалить фильм из проката
-    void deleteFilm(int filmId);
+    void deleteFilm(int filmId) throws FilmDaoException;
     //получить список всех фильмов
-    List<Film> getAllFilms();
+    List<Film> getAllFilms() throws FilmDaoException;
     //изменить фильм
-    void updateFilm(Film film);
+    void updateFilm(Film film) throws FilmDaoException;
 }

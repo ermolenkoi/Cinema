@@ -16,12 +16,6 @@ public class Film {
     public Film() {
     }
 
-    public Film(String name, TypeVideo typeVideo, int duration) {
-        this.name = name;
-        this.typeVideo = typeVideo;
-        this.duration = duration;
-    }
-
     public Film(int filmId, String name, TypeVideo typeVideo, int duration) {
         this.filmId = filmId;
         this.name = name;

@@ -12,8 +12,8 @@ public class FilmServiceImpl implements FilmService {
     private List<Film> films = BDTest.getInstance().getFilms();
 
     @Override
-    public Film createFilm(String name, TypeVideo typeVideo, int duration) {
-        Film film = new Film(name, typeVideo, duration);
+    public Film createFilm(int id, String name, TypeVideo typeVideo, int duration) {
+        Film film = new Film(id, name, typeVideo, duration);
         if (!films.contains(film)){
             films.add(film);
         }
