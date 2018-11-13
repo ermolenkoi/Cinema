@@ -26,7 +26,7 @@ public class TestDbConnection {
         /*//удалить из базы данных
         filmDAOImpl.deleteFilm(1247);*/
 
-        //изменить фильм
+        /*//изменить фильм
         try{
             List<Film> filmsFoUpdate = filmDAOImpl.getAllFilms();
             for (Film f: filmsFoUpdate){
@@ -35,7 +35,7 @@ public class TestDbConnection {
             }
         }catch (FilmDaoException ex){
             ex.printStackTrace();
-        }
+        }*/
 
 
 

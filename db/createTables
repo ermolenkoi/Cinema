@@ -4,11 +4,9 @@ name VARCHAR(20) NOT NULL,
 type int REFERENCES type_video(id),
 duration int NOT NULL
 );
-
 INSERT INTO films (id, name, type, duration) VALUES (1245, 'Brother', 'VIDEO', 90);
 INSERT INTO films (id, name, type, duration) VALUES (1486, 'Brother 2', 'VIDEO', 85);
 
-SELECT * FROM films;
 
 
 CREATE TABLE cinema_hall (
@@ -16,25 +14,24 @@ id SERIAL PRIMARY KEY,
 name VARCHAR(20) NOT NULL,
 type int REFERENCES type_video(id)
 );
-
 INSERT INTO cinema_hall (name, type) VALUES ('NUMBER_1', 1);
 INSERT INTO cinema_hall (name, type) VALUES ('NUMBER_2', 2);
 INSERT INTO cinema_hall (name, type) VALUES ('NUMBER_3', 3);
 INSERT INTO cinema_hall (name, type) VALUES ('NUMBER_4', 3);
 
-SELECT * FROM cinema_hall;
 
 CREATE TABLE cinema_hall_scheme (
-cinema_hall_scheme_id SERIAL PRIMARY KEY,
-cinema_hall_scheme_row int NOT NULL,
-cinema_hall_scheme_type int NOT NULL
+id SERIAL PRIMARY KEY,
+cinema_hall int REFERENCES cinema_hall(id),
+row int NOT NULL,
+type int NOT NULL
 );
+
 
 CREATE TABLE type_video (
 id int PRIMARY KEY,
 type VARCHAR(20) NOT NULL
 );
-
 INSERT INTO type_video (id, type) VALUES (1, 'IMAX');
 INSERT INTO type_video (id, type) VALUES (2, 'D3');
 INSERT INTO type_video (id, type) VALUES (3, 'VIDEO');
