@@ -2,6 +2,7 @@ package model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /*
 * Зал кинотеатра с типом фильмв, набором мест. Всего 4 зала
@@ -13,77 +14,22 @@ public class CinemaHall {
     private List<Position> setPositions = new ArrayList<Position>(); //набор всех мест в зале
 
 
-    public CinemaHall(HallName name) {
-        setName(name);
-        switch (name) {
-            case NUMBER_1:
-                setSetPositions(create_NUMBER_1());
-                setType(TypeVideo.IMAX);
-                break;
-            case NUMBER_2:
-                setSetPositions(create_NUMBER_2());
-                setType(TypeVideo.D3);
-                break;
-            case NUMBER_3:
-                setSetPositions(create_NUMBER_3());
-                setType(TypeVideo.VIDEO);
-                break;
-            case NUMBER_4:
-                setSetPositions(create_NUMBER_4());
-                setType(TypeVideo.VIDEO);
-                break;
-        }
-
+    public CinemaHall(HallName name, TypeVideo type, Map<Integer, Integer> scheme){
+        this.name = name;
+        this.type = type;
+        setPositions = createSetPositions(scheme);
     }
 
-    // создать набор мест для зала №1
-    private List<Position> create_NUMBER_1() {
-        List<Position> setPlace = new ArrayList<Position>();
-        int[] place = {10, 10, 10, 10, 16, 16, 18, 20};
-        for (int i = 0; i < place.length; i++) {
-            for (int j = 1; j <= place[i]; j++) {
-                setPlace.add(new Position(i + 1, j));
+    //создает набор мест по заданной схеме
+    private List<Position> createSetPositions(Map<Integer, Integer> schema) {
+        List<Position> positions = new ArrayList<Position>();
+        for (Map.Entry<Integer, Integer> entry: schema.entrySet()){
+            for (int i = 1; i <= entry.getValue() ; i++) {
+                positions.add(new Position(entry.getKey(), i));
             }
         }
-        return setPlace;
+        return positions;
     }
-
-    // создать набор мест для зала №2
-    private List<Position> create_NUMBER_2() {
-        List<Position> setPlace = new ArrayList<Position>();
-        int[] place = {10, 10, 10, 10, 10, 10, 16, 16, 18, 20};
-        for (int i = 0; i < place.length; i++) {
-            for (int j = 1; j <= place[i]; j++) {
-                setPlace.add(new Position(i + 1, j));
-            }
-        }
-        return setPlace;
-    }
-
-    // создать набор мест для зала №3
-    private List<Position> create_NUMBER_3() {
-        List<Position> setPlace = new ArrayList<Position>();
-        int[] place = {10, 10, 10, 10, 10, 10, 10, 10, 14, 14, 16, 16};
-        for (int i = 0; i < place.length; i++) {
-            for (int j = 1; j <= place[i]; j++) {
-                setPlace.add(new Position(i + 1, j));
-            }
-        }
-        return setPlace;
-    }
-
-    // создать набор мест для зала №4
-    private List<Position> create_NUMBER_4() {
-        List<Position> setPlace = new ArrayList<Position>();
-        int[] place = {8, 8, 8, 8, 8, 10, 10, 12, 12, 12};
-        for (int i = 0; i < place.length; i++) {
-            for (int j = 1; j <= place[i]; j++) {
-                setPlace.add(new Position(i + 1, j));
-            }
-        }
-        return setPlace;
-    }
-
 
     private void setName(HallName name) {
         this.name = name;
@@ -103,6 +49,10 @@ public class CinemaHall {
 
     public HallName getName() {
         return name;
+    }
+
+    public TypeVideo getType() {
+        return type;
     }
 
     @Override

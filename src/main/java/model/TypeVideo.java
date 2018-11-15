@@ -27,4 +27,5 @@ public enum TypeVideo {
     public static int getNumType(TypeVideo typeVideo){
         return typeVideo.num;
     }
+
 }

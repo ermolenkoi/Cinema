@@ -58,7 +58,7 @@ public class FilmDAOImpl implements FilmDAO {
     @Override
     public List<Film> getAllFilms() throws FilmDaoException{
         List<Film> films = new ArrayList<>();
-        try(Connection connection = simpleConnection.getConnection();
+        try(Connection connection = MyDataSourceFactory.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(SELECT);
             ResultSet resultSet = preparedStatement.executeQuery()){
         while (resultSet.next()){

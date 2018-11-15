@@ -1,6 +1,6 @@
 <Context>
     <Resource
-            name="jdbc/postgres"
+            name="jdbc/Postgres"
             auth="Container"
             type="javax.sql.DataSource"
             driverClassName="org.postgresql.Driver"

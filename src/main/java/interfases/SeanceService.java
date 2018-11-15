@@ -2,6 +2,8 @@ package interfases;
 
 import model.*;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.Calendar;
 
 /*
@@ -9,10 +11,10 @@ import java.util.Calendar;
 */
 public interface SeanceService {
     //создать сеанс
-    Seance createSeance(Film filmName, Calendar startSeance, Double priceTicket, CinemaHall cinemaHall);
-    // изменить цену сеанса
-    void updatePriceSeance(Seance seance, Double price);
-    // изменить статус места
-    void updateStatusPosition(Seance seance, Position position, Status status);
+    Seance createSeance(Film film, LocalDateTime startSeance, Double priceTicket, CinemaHall cinemaHall);
+    //изменить цену сеанса
+    Seance updatePriceSeance(Seance seance, Double price);
+    //изменить статус места
+    //void updateStatusPosition(Seance seance, Position position, Status status);
 
 }

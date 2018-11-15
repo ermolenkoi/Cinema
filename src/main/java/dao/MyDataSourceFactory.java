@@ -1,7 +1,8 @@
-/*package dao;
+package dao;
 
 import org.postgresql.ds.PGSimpleDataSource;
 
+import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
@@ -34,12 +35,13 @@ public class MyDataSourceFactory {
         return null;
     }
 
-    public static Connection getConnect(){
+    public static Connection getConnection(){
         Connection con = null;
         try {
-            InitialContext initContext = new InitialContext();
-            DataSource ds = (DataSource) initContext.lookup("java:comp/env/jdbc/postgres");
-            con = ds.getConnection();
+            Context initContext = new InitialContext();
+            Context envContext = (Context) initContext.lookup("java:comp/env");
+            DataSource ds = (DataSource) envContext.lookup("jdbc/Postgres");
+            return ds.getConnection();
         } catch (NamingException ex) {
             ex.printStackTrace();
         } catch (SQLException ex){
@@ -47,4 +49,4 @@ public class MyDataSourceFactory {
         }
         return con;
     }
-}*/
+}

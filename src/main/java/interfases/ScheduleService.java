@@ -11,10 +11,9 @@ import java.util.Calendar;
 public interface ScheduleService {
     //создать расписание на заданную дату для зала
     String createSchedule (Calendar date);
-    //удалить расписание
-    String deleteSchedule(Calendar date);
-    //получить расписание
+    //получить расписание по двте
     Schedule getSchedule(Calendar date);
+
     //добавить сеанс в расписание
     String addSeance(Calendar date, Seance seance);
     //изменить сеанс в расписании
