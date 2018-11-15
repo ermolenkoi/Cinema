@@ -12,7 +12,7 @@ public class TestCinemaHallDAOImpl {
         System.out.println(typeVideo);
         System.out.println();
 
-        CinemaHall cinemaHall = cinemaHallDAO.getCinemaHall(HallName.NUMBER_2);
+        CinemaHall cinemaHall = cinemaHallDAO.getCinemaHall(2);
         System.out.println(cinemaHall);
     }
 }

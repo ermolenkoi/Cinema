@@ -1,8 +1,8 @@
 package model;
 
 /*
-* статус муста
-* */
+ * статус муста
+ * */
 
 public enum Status {
     FREE,

@@ -14,6 +14,9 @@ public class CinemaHall {
     private List<Position> setPositions = new ArrayList<Position>(); //набор всех мест в зале
 
 
+    public CinemaHall(){
+
+    }
     public CinemaHall(HallName name, TypeVideo type, Map<Integer, Integer> scheme){
         this.name = name;
         this.type = type;

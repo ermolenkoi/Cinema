@@ -4,13 +4,13 @@ import model.CinemaHall;
 import model.HallName;
 import model.TypeVideo;
 
-import java.util.HashMap;
+import java.util.Map;
 
 /*
 интерфейс для определения функций для хранения данных о залах
 */
 public interface CinemaHallService {
     //создать новый зал по заданной схеме
-    CinemaHall createCinemaHall(HallName hallName, TypeVideo typeVideo, HashMap<Integer, Integer> scheme);
+    CinemaHall createCinemaHall(HallName hallName, TypeVideo typeVideo, Map<Integer, Integer> scheme);
 
 }

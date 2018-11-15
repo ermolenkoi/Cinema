@@ -21,19 +21,19 @@ public class CinemaHallDAOImpl implements CinemaHallDAO {
 
     @Override
     //получить зал по имени
-    public CinemaHall getCinemaHall(HallName hallName) throws CinemaHallDaoException {
-        if (hallName != null){
+    public CinemaHall getCinemaHall(Integer hallNameId) throws CinemaHallDaoException {
+        if (hallNameId != null){
             Map<Integer,Integer> map = new HashMap<>();
             try(Connection connection = simpleConnection.getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_PLACES);){
-                preparedStatement.setInt(1, HallName.getNumHallName(hallName));
-                ResultSet rs = preparedStatement.executeQuery();
-                while (rs.next()){
-                    map.put(rs.getInt("row"), rs.getInt("place"));
+                preparedStatement.setInt(1, hallNameId);
+                try(ResultSet rs = preparedStatement.executeQuery();) {
+                    while (rs.next()) {
+                        map.put(rs.getInt("row"), rs.getInt("place"));
+                    }
                 }
-                rs.close();
-                TypeVideo typeVideo = this.getTypeVideoCinemaHall(hallName);
-                CinemaHall cinemaHall = new CinemaHall(hallName, typeVideo, map);
+                TypeVideo typeVideo = this.getTypeVideoCinemaHall(HallName.getHallName(hallNameId));
+                CinemaHall cinemaHall = new CinemaHall(HallName.getHallName(hallNameId), typeVideo, map);
                 return cinemaHall;
             }catch (SQLException ex){
                 throw new CinemaHallDaoException(ex);

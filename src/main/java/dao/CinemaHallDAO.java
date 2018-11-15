@@ -7,7 +7,7 @@ import model.TypeVideo;
 
 public interface CinemaHallDAO {
     //получить зал по имени
-    CinemaHall getCinemaHall (HallName hallName) throws CinemaHallDaoException;
+    CinemaHall getCinemaHall (Integer hallNameId) throws CinemaHallDaoException;
     //получить тип зала по имени
     TypeVideo getTypeVideoCinemaHall(HallName hallName) throws CinemaHallDaoException;
 

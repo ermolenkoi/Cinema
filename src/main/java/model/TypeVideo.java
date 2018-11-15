@@ -1,8 +1,8 @@
 package model;
 
 /*
-* типы фильмов
-* */
+ * типы фильмов
+ * */
 
 public enum TypeVideo {
     IMAX(1),

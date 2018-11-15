@@ -65,6 +65,7 @@ public class Film {
 
         Film film = (Film) o;
 
+        if (filmId != film.filmId) return false;
         if (duration != film.duration) return false;
         if (name != null ? !name.equals(film.name) : film.name != null) return false;
         return typeVideo == film.typeVideo;
@@ -72,7 +73,8 @@ public class Film {
 
     @Override
     public int hashCode() {
-        int result = name != null ? name.hashCode() : 0;
+        int result = filmId;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (typeVideo != null ? typeVideo.hashCode() : 0);
         result = 31 * result + duration;
         return result;

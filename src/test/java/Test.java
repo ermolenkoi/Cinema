@@ -1,24 +1,27 @@
-
-
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-
+import java.util.Set;
+import java.util.TreeSet;
 
 public class Test {
     public static void main(String[] args) {
+        LocalDateTime d1 = LocalDateTime.of(2018, 12, 8, 10,10);
+        LocalDateTime d2 = LocalDateTime.of(2018, 12, 8, 10,20);
+        LocalDateTime d3 = LocalDateTime.of(2018, 12, 8, 10,30);
+        LocalDateTime d4 = LocalDateTime.of(2018, 12, 8, 10,40);
 
-        LocalTime d1 = LocalTime.of(23, 0);
-        LocalTime d2 = d1.plusMinutes(95);
-        System.out.println(d2);
+        LocalTime t1 = LocalTime.of(10,0);
+        LocalTime t2 = LocalTime.of(10,20);
 
-        LocalDate ld = LocalDate.of(2018, 1, 25);
-        System.out.println(ld);
+        System.out.println(t1.isAfter(t2));
 
-        LocalDateTime localDateTime = LocalDateTime.of(ld, d1);
-        System.out.println(localDateTime);
+        Set<LocalDateTime> set = new TreeSet<>();
+        set.add(d1);
+        set.add(d2);
+        set.add(d3);
+        set.add(d4);
 
-
+        System.out.println(((TreeSet<LocalDateTime>) set).ceiling(d2.plusMinutes(1)));
 
 
     }

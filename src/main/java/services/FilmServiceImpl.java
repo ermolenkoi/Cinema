@@ -11,8 +11,11 @@ public class FilmServiceImpl implements FilmService {
 
     @Override
     public Film createFilm(int id, String name, TypeVideo typeVideo, int duration) {
-        Film film = new Film(id, name, typeVideo, duration);
-        return film;
+        if (name != null && typeVideo != null && duration>0){
+            Film film = new Film(id, name, typeVideo, duration);
+            return film;
+        }
+        return null;
     }
 
 }

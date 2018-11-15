@@ -40,10 +40,12 @@ INSERT INTO cinema_hall_scheme (cinema_hall, row, place) VALUES (3, 1, 10), (3, 
 INSERT INTO cinema_hall_scheme (cinema_hall, row, place) VALUES (4, 1, 10), (4, 2, 8), (4, 3, 8), (4, 4, 8), (4, 5, 6);
 
 CREATE TABLE Seances (
-start_time timestamp PRIMARY KEY,
+id SERIAL PRIMARY KEY,
+start_time timestamp,
+ending_time timestamp,
 film int REFERENCES films(id),
 cinema_hall int REFERENCES cinema_hall(id),
 price DOUBLE PRECISION NOT NULL
 );
-INSERT INTO Seances (start_time, film, cinema_hall, price) VALUES ('2018-01-25 23:00', 1245, 4, 250.00)
+INSERT INTO Seances (start_time, ending_time, film, cinema_hall, price) VALUES ('2018-01-25 22:00', '2018-01-25 24:00', 1245, 4, 250.00)
 

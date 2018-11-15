@@ -14,8 +14,10 @@ import java.util.List;
 
 public class FilmDAOImpl implements FilmDAO {
 
-    private static final String SELECT
+    private static final String SELECT_ALL
             = "SELECT id, name, type, duration FROM films";
+    private static final String SELECT_ID
+            = "SELECT id, name, type, duration FROM films WHERE id=?";
     private static final String INSERT
             = "INSERT INTO films (id, name, type, duration) VALUES (?, ?, ?, ?)";
     private static final String DELETE
@@ -58,8 +60,8 @@ public class FilmDAOImpl implements FilmDAO {
     @Override
     public List<Film> getAllFilms() throws FilmDaoException{
         List<Film> films = new ArrayList<>();
-        try(Connection connection = MyDataSourceFactory.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(SELECT);
+        try(Connection connection = simpleConnection.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL);
             ResultSet resultSet = preparedStatement.executeQuery()){
         while (resultSet.next()){
             films.add(fillFilm(resultSet));
@@ -68,6 +70,26 @@ public class FilmDAOImpl implements FilmDAO {
             throw new FilmDaoException(ex);
         }
         return films;
+    }
+
+    //получить фильм по id
+    @Override
+    public Film getFilm(int filmId) throws FilmDaoException {
+        try(Connection connection = simpleConnection.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ID);){
+            preparedStatement.setInt(1, filmId);
+            try(ResultSet resultSet =preparedStatement.executeQuery();){
+                while (resultSet.next()){
+                    return fillFilm(resultSet);
+                }
+            }catch (SQLException ex){
+                throw new FilmDaoException(ex);
+            }
+
+        }catch (Exception ex){
+            throw new FilmDaoException(ex);
+        }
+        return null;
     }
 
     //изменить фильм

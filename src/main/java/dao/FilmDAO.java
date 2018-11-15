@@ -14,6 +14,8 @@ public interface FilmDAO {
     void deleteFilm(int filmId) throws FilmDaoException;
     //получить список всех фильмов
     List<Film> getAllFilms() throws FilmDaoException;
+    //получить фильм по id
+    Film getFilm(int filmId) throws FilmDaoException;
     //изменить фильм
     void updateFilm(Film film) throws FilmDaoException;
 }

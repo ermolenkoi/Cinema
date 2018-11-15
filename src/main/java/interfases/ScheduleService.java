@@ -1,22 +1,26 @@
 package interfases;
 
+import exceptions.ScheduleServiceException;
+import model.HallName;
 import model.Schedule;
 import model.Seance;
 
-import java.util.Calendar;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /*
-интерфейс для определения функций для хранения данных о сеансах
-*/
+ * интерфейс для определения функций расписания
+ */
 public interface ScheduleService {
     //создать расписание на заданную дату для зала
-    String createSchedule (Calendar date);
-    //получить расписание по двте
-    Schedule getSchedule(Calendar date);
-
+    Schedule createSchedule (LocalDate date);
     //добавить сеанс в расписание
-    String addSeance(Calendar date, Seance seance);
+    Schedule addSeance(Schedule schedule, Seance seance) throws ScheduleServiceException;
+    //получить сеанс по id
+    Seance getSeance(Schedule schedule, int id);
     //изменить сеанс в расписании
-    String updateSchedule(Seance seance);
+    Schedule updateSchedule(Schedule schedule, Seance seance) throws ScheduleServiceException;
+    //удалить сеанс из расписания
+    Schedule deleteSeance(Schedule schedule, Seance seance);
 
 }
