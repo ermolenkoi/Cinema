@@ -5,20 +5,22 @@ import java.util.List;
 import java.util.Map;
 
 /*
-* Зал кинотеатра с типом фильмв, набором мест. Всего 4 зала
-* */
+ * Зал кинотеатра с типом фильмв, набором мест. Всего 4 зала
+ * */
 
 public class CinemaHall {
-    private HallName name; //название зала
-    private TypeVideo type; //тип задла IMAX/3D/VIDEO
+    private int id;                                           //идентификационнфй номер зала
+    private HallName name;                                    //название зала
+    private TypeVideo type;                                   //тип задла IMAX/3D/VIDEO
     private List<Position> setPositions = new ArrayList<Position>(); //набор всех мест в зале
 
 
     public CinemaHall(){
 
     }
-    public CinemaHall(HallName name, TypeVideo type, Map<Integer, Integer> scheme){
-        this.name = name;
+    public CinemaHall(int id, TypeVideo type, Map<Integer, Integer> scheme){
+        this.id = id;
+        this.name = HallName.getHallName(id);
         this.type = type;
         setPositions = createSetPositions(scheme);
     }
@@ -34,16 +36,24 @@ public class CinemaHall {
         return positions;
     }
 
-    private void setName(HallName name) {
+    public void setName(HallName name) {
         this.name = name;
     }
 
-    private void setType(TypeVideo type) {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setType(TypeVideo type) {
         this.type = type;
     }
 
-    private void setSetPositions(List<Position> setPlace) {
+    public void setSetPositions(List<Position> setPlace) {
         this.setPositions = setPlace;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public List<Position> getSetPositions() {
@@ -65,6 +75,7 @@ public class CinemaHall {
 
         CinemaHall that = (CinemaHall) o;
 
+        if (id != that.id) return false;
         if (name != that.name) return false;
         if (type != that.type) return false;
         return setPositions != null ? setPositions.equals(that.setPositions) : that.setPositions == null;
@@ -72,7 +83,8 @@ public class CinemaHall {
 
     @Override
     public int hashCode() {
-        int result = name != null ? name.hashCode() : 0;
+        int result = id;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (type != null ? type.hashCode() : 0);
         result = 31 * result + (setPositions != null ? setPositions.hashCode() : 0);
         return result;

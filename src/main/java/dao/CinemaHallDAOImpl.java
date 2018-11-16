@@ -2,9 +2,11 @@ package dao;
 
 import exceptions.CinemaHallDaoException;
 import exceptions.FilmDaoException;
+import interfases.CinemaHallService;
 import model.CinemaHall;
 import model.HallName;
 import model.TypeVideo;
+import services.CinemaHallServiceImpl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,6 +15,9 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+ * сервис взаимодействия кинозала с БД
+ * */
 public class CinemaHallDAOImpl implements CinemaHallDAO {
     private static final String SELECT_ALL_PLACES = "SELECT row, place FROM cinema_Hall_Scheme WHERE cinema_Hall=?";
     private static final String SELECT_TYPE_VIDEO = "SELECT type FROM cinema_Hall WHERE id=?";
@@ -20,26 +25,24 @@ public class CinemaHallDAOImpl implements CinemaHallDAO {
 
 
     @Override
-    //получить зал по имени
-    public CinemaHall getCinemaHall(Integer hallNameId) throws CinemaHallDaoException {
-        if (hallNameId != null){
-            Map<Integer,Integer> map = new HashMap<>();
+    //получить зал по id
+    public CinemaHall getCinemaHall(int id) throws CinemaHallDaoException {
+        CinemaHallService cinemaHallService = new CinemaHallServiceImpl();
+        Map<Integer,Integer> map = new HashMap<>();
             try(Connection connection = simpleConnection.getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_PLACES);){
-                preparedStatement.setInt(1, hallNameId);
+                preparedStatement.setInt(1, id);
                 try(ResultSet rs = preparedStatement.executeQuery();) {
                     while (rs.next()) {
                         map.put(rs.getInt("row"), rs.getInt("place"));
                     }
                 }
-                TypeVideo typeVideo = this.getTypeVideoCinemaHall(HallName.getHallName(hallNameId));
-                CinemaHall cinemaHall = new CinemaHall(HallName.getHallName(hallNameId), typeVideo, map);
+                TypeVideo typeVideo = this.getTypeVideoCinemaHall(HallName.getHallName(id));
+                CinemaHall cinemaHall = cinemaHallService.createCinemaHall(id, typeVideo, map);
                 return cinemaHall;
             }catch (SQLException ex){
                 throw new CinemaHallDaoException(ex);
             }
-        }
-        return null;
     }
 
     //получить тип видео в зале по имени

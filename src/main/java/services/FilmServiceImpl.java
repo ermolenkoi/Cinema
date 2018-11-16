@@ -18,4 +18,8 @@ public class FilmServiceImpl implements FilmService {
         return null;
     }
 
+    @Override
+    public Film createFilm() {
+        return new Film();
+    }
 }

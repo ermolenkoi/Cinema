@@ -5,38 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d27c7b00-cd0e-400e-b4ea-bf60afff8ab4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/SeanceDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/SeanceDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/ScheduleServiceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/SeanceDaoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestScheduleServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestSeanceDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ScheduleDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/ScheduleDaoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/SeanceServiceException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestScheduleDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/createTables" beforeDir="false" afterPath="$PROJECT_DIR$/db/createTables" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/insertTables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/insertTables.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/CinemaHallDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CinemaHallDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/CinemaHallDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CinemaHallDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/FilmDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/FilmDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/FilmDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/FilmDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/SeanceDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/SeanceDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/SeanceDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/SeanceDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/SimpleConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/SimpleConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/interfases/CinemaHallService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfases/CinemaHallService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfases/FilmService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfases/FilmService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/interfases/ScheduleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfases/ScheduleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/interfases/SeanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfases/SeanceService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/CinemaHall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/CinemaHall.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Film.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/HallName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/HallName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Schedule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Seance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Seance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/TypeVideo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/TypeVideo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/CinemaHallServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/CinemaHallServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/FilmServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/FilmServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/ScheduleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ScheduleServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/SeanceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/SeanceServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestScheduleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestScheduleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestSeanceDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSeanceDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/SimpleConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/SimpleConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/interfases/FilmService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/interfases/FilmService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/interfases/ScheduleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/interfases/ScheduleService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/interfases/SeanceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/interfases/SeanceService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/model/CinemaHall.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/CinemaHall.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Film.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Film.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/model/Schedule.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Schedule.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/model/Seance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Seance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/FilmServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/FilmServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/services/ScheduleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/ScheduleServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/services/SeanceServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/SeanceServiceImpl.class" afterDir="false" />
     </list>
@@ -90,47 +99,49 @@
     <session id="-2063330704">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.22" value="1" />
+          <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="createTables" value="7" />
-          <entry key="java" value="194" />
+          <entry key="createTables" value="9" />
+          <entry key="java" value="384" />
           <entry key="jsp" value="2" />
-          <entry key="sql" value="1" />
-          <entry key="xml" value="10" />
+          <entry key="sql" value="3" />
+          <entry key="xml" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="194" />
+          <entry key="JAVA" value="384" />
           <entry key="JSP" value="2" />
-          <entry key="SQL" value="8" />
-          <entry key="XML" value="10" />
+          <entry key="SQL" value="12" />
+          <entry key="XML" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="createTables" value="456" />
+          <entry key="createTables" value="477" />
           <entry key="dummy" value="25" />
-          <entry key="java" value="7428" />
+          <entry key="java" value="11171" />
           <entry key="jsp" value="34" />
+          <entry key="sql" value="15" />
           <entry key="xml" value="120" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7428" />
+          <entry key="JAVA" value="11171" />
           <entry key="JSP" value="34" />
           <entry key="PLAIN_TEXT" value="25" />
-          <entry key="SQL" value="456" />
+          <entry key="SQL" value="492" />
           <entry key="XML" value="120" />
         </counts>
       </usages-collector>
@@ -141,75 +152,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/createTables">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="43" column="14" lean-forward="true" selection-start-line="41" selection-end-line="48" selection-end-column="2" />
+            <state relative-caret-position="204">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/services/SeanceServiceImpl.java">
+        <entry file="file://$PROJECT_DIR$/db/insertTables.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="153">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/SeanceDAOImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/Status.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="87" column="49" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#addSeance#0;class#SeanceDAOImpl#0" />
-                <element signature="method#deleteSeance#0;class#SeanceDAOImpl#0" />
-                <element signature="method#updateSeance#0;class#SeanceDAOImpl#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/CinemaHall.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-              <folding>
-                <element signature="method#CinemaHall#0;class#CinemaHall#0" />
-                <element signature="e#1371#1372#0" expanded="true" />
-                <element signature="e#1398#1399#0" expanded="true" />
-                <element signature="e#1432#1433#0" expanded="true" />
-                <element signature="e#1459#1460#0" expanded="true" />
-                <element signature="method#equals#0;class#CinemaHall#0" />
-                <element signature="method#hashCode#0;class#CinemaHall#0" />
-                <element signature="method#toString#0;class#CinemaHall#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/SeanceDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="102">
+              <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/TestSeanceDAOImpl.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/Position.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="340">
+              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -235,14 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/BD.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/SeanceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/ScheduleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/BDTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/FilmService.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestDbConection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/SimpleConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/FilmDbDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/SimpleSelect.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/HelloServlet.java" />
@@ -250,8 +213,6 @@
         <option value="$PROJECT_DIR$/src/test/java/TestDbConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlets/GetFilms.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/DB.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/model/HallName.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Position.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/MyDataSourceFactory.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestDataSource.java" />
         <option value="$PROJECT_DIR$/src/main/java/interfases/PositionService.java" />
@@ -259,33 +220,43 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/exceptions/CinemaHallDaoException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/interfases/FilmService.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TestCinemaHallDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Film.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Status.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/TypeVideo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/interfases/CinemaHallService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Schedule.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/exceptions/ScheduleServiceException.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestScheduleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/interfases/ScheduleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/ScheduleServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/FilmServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/services/CinemaHallServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/exceptions/SeanceDaoException.java" />
-        <option value="$PROJECT_DIR$/db/createTables" />
-        <option value="$PROJECT_DIR$/src/main/java/services/SeanceServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/interfases/SeanceService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/SeanceDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Seance.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Film.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/FilmDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/FilmDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/CinemaHall.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/SeanceDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/SimpleConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exceptions/ScheduleDaoException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Schedule.java" />
+        <option value="$PROJECT_DIR$/src/main/java/interfases/FilmService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/FilmServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/CinemaHallDAO.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestCinemaHallDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Seance.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/HallName.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/CinemaHall.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/CinemaHallServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/interfases/CinemaHallService.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/CinemaHallDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/SeanceDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exceptions/SeanceServiceException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/interfases/SeanceService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/SeanceServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestScheduleServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestSeanceDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/SeanceDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/interfases/ScheduleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/ScheduleDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/services/ScheduleServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TestScheduleDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Status.java" />
+        <option value="$PROJECT_DIR$/db/createTables" />
+        <option value="$PROJECT_DIR$/db/insertTables.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Position.java" />
       </list>
     </option>
   </component>
@@ -334,7 +305,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
@@ -348,6 +319,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -439,8 +412,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -449,7 +420,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542293447177" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542378704284" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../cinema-master" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -475,7 +446,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestSeanceDAOImpl">
+  <component name="RunManager" selected="Application.TestScheduleDAOImpl">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test" />
       <module name="cinema" />
@@ -490,8 +461,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestDataSource" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TestDataSource" />
+    <configuration name="TestScheduleDAOImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestScheduleDAOImpl" />
       <module name="cinema" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -541,17 +512,17 @@
     <list>
       <item itemvalue="Maven.StartTomCat" />
       <item itemvalue="Application.Test" />
-      <item itemvalue="Application.TestDataSource" />
       <item itemvalue="Application.TestCinemaHallDAOImpl" />
       <item itemvalue="Application.TestScheduleServiceImpl" />
       <item itemvalue="Application.TestSeanceDAOImpl" />
+      <item itemvalue="Application.TestScheduleDAOImpl" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestSeanceDAOImpl" />
+        <item itemvalue="Application.TestScheduleDAOImpl" />
         <item itemvalue="Application.TestScheduleServiceImpl" />
         <item itemvalue="Application.Test" />
-        <item itemvalue="Application.TestScheduleService" />
+        <item itemvalue="Application.TestSeanceDAOImpl" />
         <item itemvalue="Application.TestCinemaHallDAOImpl" />
       </list>
     </recent_temporary>
@@ -585,9 +556,39 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17324094" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1748401" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.32827735" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.32502708" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50053304" side_tool="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32805908" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49946696" weight="0.32827735" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.25479743" />
+      <window_info anchor="right" id="Database" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1748401" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -616,7 +617,7 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.25479743" />
       <window_info anchor="right" id="Database" order="8" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -649,9 +650,24 @@
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/TestScheduleServiceImpl.java</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/TestScheduleDAOImpl.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
+      <configuration name="Application">
+        <watch expression="s" language="JAVA" />
+      </configuration>
       <configuration name="MavenRunConfiguration">
         <watch expression="ds.getConnection()" language="JAVA" />
         <watch expression="envContext" language="JAVA" />
@@ -665,6 +681,16 @@
   <component name="debuggerHistoryManager">
     <expressions id="watch">
       <expression>
+        <expression-string>s</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>startSeance.equals(s.getStartSeance())</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>envContext</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -677,78 +703,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/insertTables.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/postgresql-42.2.5.jar!/org/postgresql/Driver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/META-INF/context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/interfases/PositionService.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestEnum.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestDbConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/BDTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestCinemaHallDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/time/LocalTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="294" column="28" selection-start-line="294" selection-start-column="28" selection-end-line="294" selection-end-column="28" />
-          <folding>
-            <element signature="e#7775#7776#0" expanded="true" />
-            <element signature="e#7828#7829#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/MyDataSourceFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -759,58 +713,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Position.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Status.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/TypeVideo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/time/LocalDateTime.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="501" column="12" selection-start-line="501" selection-start-column="12" selection-end-line="501" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exceptions/CinemaHallDaoException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/interfases/CinemaHallService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -820,77 +726,6 @@
           <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#178#179#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Schedule.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#463#464#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#542#543#0" expanded="true" />
-            <element signature="method#equals#0;class#Schedule#0" />
-            <element signature="method#hashCode#0;class#Schedule#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/interfases/ScheduleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="93" selection-start-line="21" selection-start-column="93" selection-end-line="21" selection-end-column="93" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/ScheduleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="105" column="67" selection-start-line="105" selection-start-column="67" selection-end-line="105" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createSchedule#0;class#ScheduleServiceImpl#0" />
-            <element signature="method#addSeance#0;class#ScheduleServiceImpl#0" />
-            <element signature="method#getSeance#0;class#ScheduleServiceImpl#0" />
-            <element signature="method#updateSchedule#0;class#ScheduleServiceImpl#0" />
-            <element signature="method#deleteSeance#0;class#ScheduleServiceImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/FilmServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="83" selection-start-line="12" selection-start-column="83" selection-end-line="12" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createFilm#0;class#FilmServiceImpl#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/CinemaHallServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exceptions/FilmDaoException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="2" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="method#FilmDaoException#0;class#FilmDaoException#0" />
           </folding>
         </state>
       </provider>
@@ -912,54 +747,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestScheduleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="25" column="22" selection-start-line="22" selection-start-column="8" selection-end-line="39" selection-end-column="91" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/interfases/SeanceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Film.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="e#640#641#0" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#706#707#0" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
-            <element signature="e#801#802#0" expanded="true" />
-            <element signature="method#equals#0;class#Film#0" />
-            <element signature="method#hashCode#0;class#Film#0" />
-            <element signature="method#toString#0;class#Film#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.ideaLibSources/postgresql-42.2.5-sources.jar!/org/postgresql/Driver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="255" selection-start-line="255" selection-end-line="255" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.ideaLibSources/postgresql-42.2.5-sources.jar!/org/postgresql/core/QueryExecutorBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="146" selection-start-line="146" selection-end-line="146" />
-          <folding>
-            <element signature="e#4344#4345#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -984,106 +775,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/SimpleConnection.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FilmDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="85">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exceptions/ScheduleDaoException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="method#FilmDaoException#0;class#ScheduleDaoException#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FilmDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding>
+            <element signature="method#addFilm#0;class#FilmDAOImpl#0" />
+            <element signature="method#deleteFilm#0;class#FilmDAOImpl#0" />
+            <element signature="method#getFilm#0;class#FilmDAOImpl#0" />
+            <element signature="method#updateFilm#0;class#FilmDAOImpl#0" />
+            <element signature="method#fillFilm#0;class#FilmDAOImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/SeanceDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="5" selection-end-line="7" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/interfases/FilmService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/SeanceDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/FilmServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#552#553#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="2993" selection-start-line="2993" selection-end-line="2993" />
+          <folding>
+            <element signature="e#117955#117956#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="13" column="61" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/services/SeanceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FilmDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FilmDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/CinemaHall.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding>
-            <element signature="method#CinemaHall#0;class#CinemaHall#0" />
-            <element signature="e#1371#1372#0" expanded="true" />
-            <element signature="e#1398#1399#0" expanded="true" />
-            <element signature="e#1432#1433#0" expanded="true" />
-            <element signature="e#1459#1460#0" expanded="true" />
-            <element signature="method#equals#0;class#CinemaHall#0" />
-            <element signature="method#hashCode#0;class#CinemaHall#0" />
-            <element signature="method#toString#0;class#CinemaHall#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Seance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1404#1405#0" expanded="true" />
-            <element signature="e#1438#1439#0" expanded="true" />
-            <element signature="e#1484#1485#0" expanded="true" />
-            <element signature="e#1519#1520#0" expanded="true" />
-            <element signature="method#equals#0;class#Seance#0" />
-            <element signature="method#hashCode#0;class#Seance#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/createTables">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Number.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
-          <caret line="43" column="14" lean-forward="true" selection-start-line="41" selection-end-line="48" selection-end-column="2" />
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Double.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="518" selection-start-line="518" selection-end-line="518" />
+          <folding>
+            <element signature="e#20970#20971#0" expanded="true" />
+            <element signature="e#23334#23335#0" expanded="true" />
+            <element signature="e#23368#23369#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestCinemaHallDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/HallName.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          <folding>
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/CinemaHallDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfases/CinemaHallService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        <state relative-caret-position="221">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1092,34 +910,276 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/CinemaHallDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+        <state relative-caret-position="119">
+          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/SeanceDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/CinemaHallServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="87" column="49" selection-start-line="87" selection-start-column="49" selection-end-line="87" selection-end-column="49" />
+        <state relative-caret-position="255">
+          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addSeance#0;class#SeanceDAOImpl#0" />
-            <element signature="method#deleteSeance#0;class#SeanceDAOImpl#0" />
-            <element signature="method#updateSeance#0;class#SeanceDAOImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/CinemaHallDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="35" column="39" lean-forward="true" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Film.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#740#741#0" expanded="true" />
+            <element signature="method#equals#0;class#Film#0" />
+            <element signature="method#hashCode#0;class#Film#0" />
+            <element signature="method#toString#0;class#Film#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exceptions/CinemaHallDaoException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exceptions/FilmDaoException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="method#FilmDaoException#0;class#FilmDaoException#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exceptions/SeanceServiceException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="method#FilmDaoException#0;class#SeanceServiceException#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfases/SeanceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="134" selection-start-line="15" selection-start-column="134" selection-end-line="15" selection-end-column="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestScheduleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="42" column="8" lean-forward="true" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TestSeanceDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+        <state relative-caret-position="484">
+          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/SeanceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="24" column="97" selection-start-line="24" selection-start-column="97" selection-end-line="24" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ScheduleDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/postgresql-42.2.5-sources.jar!/org/postgresql/Driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/interfases/ScheduleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Schedule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="method#equals#0;class#Schedule#0" />
+            <element signature="method#hashCode#0;class#Schedule#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/SimpleConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/SeanceDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#addSeance#0;class#SeanceDAOImpl#0" />
+            <element signature="method#deleteSeance#0;class#SeanceDAOImpl#0" />
+            <element signature="method#getSeance#0;class#SeanceDAOImpl#0" />
+            <element signature="method#fillSeance#0;class#SeanceDAOImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ScheduleDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#deleteSeance#0;class#ScheduleDAOImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Seance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1305#1306#0" expanded="true" />
+            <element signature="e#1330#1331#0" expanded="true" />
+            <element signature="e#1431#1432#0" expanded="true" />
+            <element signature="e#1465#1466#0" expanded="true" />
+            <element signature="e#1511#1512#0" expanded="true" />
+            <element signature="e#1546#1547#0" expanded="true" />
+            <element signature="e#1692#1693#0" expanded="true" />
+            <element signature="method#equals#0;class#Seance#0" />
+            <element signature="method#hashCode#0;class#Seance#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/CinemaHall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+          <folding>
+            <element signature="method#CinemaHall#0;class#CinemaHall#0" />
+            <element signature="e#1738#1739#0" expanded="true" />
+            <element signature="e#1772#1773#0" expanded="true" />
+            <element signature="e#1799#1800#0" expanded="true" />
+            <element signature="method#equals#0;class#CinemaHall#0" />
+            <element signature="method#hashCode#0;class#CinemaHall#0" />
+            <element signature="method#toString#0;class#CinemaHall#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/services/ScheduleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="87" column="64" lean-forward="true" selection-start-line="87" selection-start-column="64" selection-end-line="87" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#createSchedule#0;class#ScheduleServiceImpl#0" />
+            <element signature="method#getSeance#0;class#ScheduleServiceImpl#0" />
+            <element signature="method#getAllSeances#0;class#ScheduleServiceImpl#0" />
+            <element signature="method#deleteSeance#0;class#ScheduleServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/TestScheduleDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/TypeVideo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/createTables">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/insertTables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
         </state>
       </provider>
     </entry>

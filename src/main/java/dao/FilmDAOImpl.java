@@ -11,7 +11,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/*
+ * сервис взаимодействия вильма с БД
+ * */
 public class FilmDAOImpl implements FilmDAO {
 
     private static final String SELECT_ALL

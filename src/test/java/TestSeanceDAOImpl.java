@@ -1,6 +1,7 @@
 import dao.SeanceDAO;
 import dao.SeanceDAOImpl;
 import exceptions.SeanceDaoException;
+import exceptions.SeanceServiceException;
 import interfases.CinemaHallService;
 import interfases.FilmService;
 import interfases.ScheduleService;
@@ -28,23 +29,31 @@ public class TestSeanceDAOImpl {
         scheme.put(2, 10);
         scheme.put(3, 8);
 
-        CinemaHall cinemaHall = cinemaHallService.createCinemaHall(HallName.NUMBER_3, TypeVideo.VIDEO, scheme);
+        CinemaHall cinemaHall = cinemaHallService.createCinemaHall(3, TypeVideo.VIDEO, scheme);
         Film film = filmService.createFilm(1245, "1234", TypeVideo.VIDEO, 90);
-        LocalDateTime ld_9_00 = LocalDateTime.of(2018, 12, 2, 9, 0);
+        LocalDateTime ld_9_00 = LocalDateTime.of(2018, 12, 3, 10, 0);
         LocalDateTime ld_11_00 = LocalDateTime.of(2018, 12, 2, 11, 0);
         LocalDateTime ld_10_00 = LocalDateTime.of(2018, 12, 2, 10, 0);
 
-        Seance seance_1 = seanceService.createSeance(1,film, ld_9_00, 220.00, cinemaHall);
-        Seance seance_2 = seanceService.createSeance(2,film, ld_11_00, 220.00, cinemaHall);
-        Seance seance_3 = seanceService.createSeance(3,film, ld_10_00, 220.00, cinemaHall);
+        Seance seance_1 = null;
+        Seance seance_2 = null;
+        Seance seance_3 = null;
+
+        try{
+            seance_1 = seanceService.createSeance(film, ld_9_00, 220.00, cinemaHall);
+            seance_2 = seanceService.createSeance(2,film, ld_11_00, 220.00, cinemaHall);
+            seance_3 = seanceService.createSeance(3,film, ld_10_00, 220.00, cinemaHall);
+        }catch (SeanceServiceException ex){
+            ex.printStackTrace();
+        }
 
         try {
             //seanceDAO.addSeance(seance_1);
-            //seanceDAO.deleteSeance(2);
+            //seanceDAO.deleteSeance(5);
             //Seance updateSeance = seanceService.createSeance(4, film, ld_9_00, 500.00, cinemaHall);
             //System.out.println(updateSeance);
             //seanceDAO.updateSeance(updateSeance);
-            System.out.println(seanceDAO.getSeance(4));
+            System.out.println(seanceDAO.getSeance(6));
         } catch (SeanceDaoException e) {
             e.printStackTrace();
         }

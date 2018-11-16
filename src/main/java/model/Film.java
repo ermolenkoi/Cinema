@@ -3,8 +3,8 @@ package model;
 import java.util.Calendar;
 
 /*
-* фильм добавляемый в прокат
-* */
+ * фильм добавляемый в прокат
+ * */
 
 public class Film {
     int filmId; //идентификатор фильма

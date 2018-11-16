@@ -8,7 +8,7 @@ public enum HallName {
     NUMBER_1(1), // зал IMAX
     NUMBER_2(2), // зал 3d
     NUMBER_3(3), // зал обычного VIDEO
-    NUMBER_4(4);  // зал обычного VIDEO
+    NUMBER_4(4); // зал обычного VIDEO
 
     int num = 0;
 

@@ -1,5 +1,6 @@
 package interfases;
 
+import exceptions.SeanceServiceException;
 import model.*;
 
 import java.time.LocalDateTime;
@@ -11,9 +12,9 @@ import java.util.Calendar;
  **/
 public interface SeanceService {
     //создать сеанс
-    Seance createSeance(int id, Film film, LocalDateTime startSeance, Double priceTicket, CinemaHall cinemaHall);
-    Seance createSeance(Film film, LocalDateTime startSeance, Double priceTicket, CinemaHall cinemaHall);
-
+    Seance createSeance(int id, Film film, LocalDateTime startSeance, Double priceTicket, CinemaHall cinemaHall) throws SeanceServiceException;
+    Seance createSeance(Film film, LocalDateTime startSeance, Double priceTicket, CinemaHall cinemaHall) throws SeanceServiceException;
+    Seance createSeance();
     //изменить статус места
     //void updateStatusPosition(Seance seance, Position position, Status status);
 

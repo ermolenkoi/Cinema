@@ -7,6 +7,9 @@ import model.TypeVideo;
 import java.util.Calendar;
 import java.util.List;
 
+/*
+ * интерфейс взаимодействия фильма с БД
+ * */
 public interface FilmDAO {
     //добавить новый фильм
     void addFilm(Film film) throws FilmDaoException;

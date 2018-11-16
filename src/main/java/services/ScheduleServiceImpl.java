@@ -6,21 +6,20 @@ import model.HallName;
 import model.Schedule;
 import model.Seance;
 import interfases.ScheduleService;
-import model.TypeVideo;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
 
+/*
+ * сервис управления расписанием
+ * */
 public class ScheduleServiceImpl implements ScheduleService {
 
-    //создать расписание если оно еще не создано
+    //создать расписание
     @Override
     public Schedule createSchedule(LocalDate date) {
-        if (date != date){
+        if (date != null){
             Schedule schedule = new Schedule(date);
             return schedule;
         }
@@ -29,14 +28,17 @@ public class ScheduleServiceImpl implements ScheduleService {
 
     //добавить сеанс в расписание
     @Override
-    public Schedule addSeance(Schedule schedule ,Seance seance) throws ScheduleServiceException {
+    public Boolean addSeance(Schedule schedule ,Seance seance) throws ScheduleServiceException {
         if (schedule != null && seance != null){
             Boolean flag = true;
-            HallName hallName = seance.getCinemaHall().getName();
             LocalDateTime startSeance = seance.getStartSeance();
             LocalDateTime endingSeance = seance.getEndingSeance();
             for (Seance s: schedule.getSeances()){
-                if (s.getCinemaHall().getName().equals(hallName)){
+                if (s.getCinemaHall().getId() == seance.getCinemaHall().getId()){
+                    if (startSeance.equals(s.getStartSeance())){
+                        flag = false;
+                        throw new ScheduleServiceException("В это время уже идет другой фильм");
+                    }
                     if (startSeance.isAfter(s.getStartSeance()) && startSeance.isBefore(s.getEndingSeance())){
                         flag = false;
                         throw new ScheduleServiceException("В это время уже идет другой фильм");
@@ -50,7 +52,7 @@ public class ScheduleServiceImpl implements ScheduleService {
             if (flag){
                 schedule.getSeances().add(seance);
             }
-            return schedule;
+            return flag;
         }
         return null;
     }
@@ -69,16 +71,24 @@ public class ScheduleServiceImpl implements ScheduleService {
         return null;
     }
 
+    //получить все сеансы расписания
+    @Override
+    public List<Seance> getAllSeances(Schedule schedule) throws ScheduleServiceException {
+        if (schedule != null){
+            return schedule.getSeances();
+        }
+        return null;
+    }
+
     //изменить сеанс в расписании
     @Override
-    public Schedule updateSchedule(Schedule schedule, Seance seance) throws ScheduleServiceException{
+    public Boolean updateSchedule(Schedule schedule, Seance seance) throws ScheduleServiceException{
         if (schedule != null && seance != null){
             Boolean flag = true;
-            HallName hallName = seance.getCinemaHall().getName();
             LocalDateTime startSeance = seance.getStartSeance();
             LocalDateTime endingSeance = seance.getEndingSeance();
             for (Seance s: schedule.getSeances()){
-                if (s.getCinemaHall().getName().equals(hallName) && s.getId() != seance.getId()){
+                if (s.getCinemaHall().getId() == seance.getCinemaHall().getId() && s.getId() != seance.getId()){
                     if (startSeance.isAfter(s.getStartSeance()) && startSeance.isBefore(s.getEndingSeance())){
                         flag = false;
                         throw new ScheduleServiceException("В это время уже идет другой фильм");
@@ -97,11 +107,12 @@ public class ScheduleServiceImpl implements ScheduleService {
                 updateSeance.setEndingSeance(seance.getEndingSeance());
                 updateSeance.setPriceTicket(seance.getPriceTicket());
             }
-            return schedule;
+            return flag;
         }
         return null;
     }
 
+    //удалить сеанс из расписания
     @Override
     public Schedule deleteSeance(Schedule schedule, Seance seance) {
         if (schedule != null && seance != null){

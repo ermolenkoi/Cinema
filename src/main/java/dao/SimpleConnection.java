@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/*
+ * класс получения Connection через DriverManager
+ * */
 public class SimpleConnection {
 
     public SimpleConnection(){

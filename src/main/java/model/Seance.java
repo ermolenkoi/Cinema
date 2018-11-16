@@ -8,7 +8,7 @@ import java.time.LocalTime;
  * */
 
 public class Seance {
-    private int id;                     // идентификационный номан сеанса
+    private int id;                     // идентификационный номер сеанса
     private Film film;                  // название фильма
     private LocalDateTime startSeance;  // время начала сеанса
     private LocalDateTime endingSeance; // окончание сеанса
@@ -114,8 +114,8 @@ public class Seance {
 
     @Override
     public String toString() {
-        return film.getName() + " в " + startSeance.toString() + " " + film.getTypeVideo()
-                + " в зале " + cinemaHall.getName() + " цена билета " + priceTicket
+        return film.getFilmId() + " в " + startSeance.toString() + " " + film.getTypeVideo()
+                + " в зале №" + cinemaHall.getId() + " цена билета " + priceTicket
                 + " рублей. Окончание сенса в " + endingSeance.toString();
     }
 }

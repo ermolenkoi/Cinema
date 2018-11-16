@@ -4,29 +4,22 @@ name VARCHAR(20) NOT NULL,
 type int REFERENCES type_video(id),
 duration int NOT NULL
 );
-INSERT INTO films (id, name, type, duration) VALUES (1245, 'Brother', 'VIDEO', 90);
-INSERT INTO films (id, name, type, duration) VALUES (1486, 'Brother 2', 'VIDEO', 85);
-
 
 CREATE TABLE type_video (
 id int PRIMARY KEY,
 type VARCHAR(20) NOT NULL
 );
-INSERT INTO type_video (id, type) VALUES (1, 'IMAX');
-INSERT INTO type_video (id, type) VALUES (2, 'D3');
-INSERT INTO type_video (id, type) VALUES (3, 'VIDEO');
 
+CREATE TABLE Place_Status (
+id int PRIMARY KEY,
+status VARCHAR(20) NOT NULL
+);
 
 CREATE TABLE cinema_hall (
 id int PRIMARY KEY,
 name VARCHAR(20) NOT NULL,
 type int REFERENCES type_video(id)
 );
-INSERT INTO cinema_hall (id, name, type) VALUES (1, 'NUMBER_1', 1);
-INSERT INTO cinema_hall (id, name, type) VALUES (2, 'NUMBER_2', 2);
-INSERT INTO cinema_hall (id, name, type) VALUES (3, 'NUMBER_3', 3);
-INSERT INTO cinema_hall (id, name, type) VALUES (4, 'NUMBER_4', 3);
-
 
 CREATE TABLE cinema_hall_scheme (
 id SERIAL PRIMARY KEY,
@@ -34,10 +27,6 @@ cinema_hall int REFERENCES cinema_hall(id),
 row int NOT NULL,
 place int NOT NULL
 );
-INSERT INTO cinema_hall_scheme (cinema_hall, row, place) VALUES (1, 1, 10), (1, 2, 8), (1, 3, 8), (1, 4, 8);
-INSERT INTO cinema_hall_scheme (cinema_hall, row, place) VALUES (2, 1, 10), (2, 2, 8), (2, 3, 8);
-INSERT INTO cinema_hall_scheme (cinema_hall, row, place) VALUES (3, 1, 10), (3, 2, 8), (3, 3, 8);
-INSERT INTO cinema_hall_scheme (cinema_hall, row, place) VALUES (4, 1, 10), (4, 2, 8), (4, 3, 8), (4, 4, 8), (4, 5, 6);
 
 CREATE TABLE Seances (
 id SERIAL PRIMARY KEY,
@@ -47,5 +36,4 @@ film int REFERENCES films(id),
 cinema_hall int REFERENCES cinema_hall(id),
 price DOUBLE PRECISION NOT NULL
 );
-INSERT INTO Seances (start_time, ending_time, film, cinema_hall, price) VALUES ('2018-01-25 22:00', '2018-01-25 24:00', 1245, 4, 250.00)
 

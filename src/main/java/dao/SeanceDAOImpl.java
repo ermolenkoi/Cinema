@@ -2,16 +2,23 @@ package dao;
 
 import exceptions.CinemaHallDaoException;
 import exceptions.FilmDaoException;
-import exceptions.ScheduleServiceException;
 import exceptions.SeanceDaoException;
+import interfases.CinemaHallService;
+import interfases.FilmService;
+import interfases.SeanceService;
 import model.CinemaHall;
 import model.Film;
 import model.HallName;
 import model.Seance;
+import services.CinemaHallServiceImpl;
+import services.FilmServiceImpl;
+import services.SeanceServiceImpl;
 
 import java.sql.*;
-import java.time.LocalDateTime;
 
+/*
+ * сервис взаимодействия сеанса с БД
+ * */
 public class SeanceDAOImpl implements SeanceDAO {
 
 
@@ -26,6 +33,7 @@ public class SeanceDAOImpl implements SeanceDAO {
 
     private SimpleConnection simpleConnection = new SimpleConnection();
 
+    //добфвить сеанс в базу данных
     @Override
     public Integer addSeance(Seance seance) throws SeanceDaoException{
         if (seance != null){
@@ -34,7 +42,7 @@ public class SeanceDAOImpl implements SeanceDAO {
                 pst.setTimestamp(1, Timestamp.valueOf(seance.getStartSeance()));
                 pst.setTimestamp(2, Timestamp.valueOf(seance.getEndingSeance()));
                 pst.setInt(3, seance.getFilm().getFilmId());
-                pst.setInt(4, HallName.getNumHallName(seance.getCinemaHall().getName()));
+                pst.setInt(4, seance.getCinemaHall().getId());
                 pst.setDouble(5, seance.getPriceTicket());
                 pst.executeUpdate();
             }catch (SQLException ex){
@@ -44,6 +52,7 @@ public class SeanceDAOImpl implements SeanceDAO {
         return null;
     }
 
+    //удалить сеанс из базы данных
     @Override
     public void deleteSeance(int SeanceId) throws SeanceDaoException {
         try(Connection connection = simpleConnection.getConnection();
@@ -55,6 +64,7 @@ public class SeanceDAOImpl implements SeanceDAO {
         }
     }
 
+    //Изменить сеанс в базе данных
     @Override
     public void updateSeance(Seance seance) throws SeanceDaoException {
         if (seance != null) {
@@ -63,7 +73,7 @@ public class SeanceDAOImpl implements SeanceDAO {
                 pst.setTimestamp(1, Timestamp.valueOf(seance.getStartSeance()));
                 pst.setTimestamp(2, Timestamp.valueOf(seance.getEndingSeance()));
                 pst.setInt(3, seance.getFilm().getFilmId());
-                pst.setInt(4, HallName.getNumHallName(seance.getCinemaHall().getName()));
+                pst.setInt(4, seance.getCinemaHall().getId());
                 pst.setDouble(5, seance.getPriceTicket());
                 pst.setInt(6, seance.getId());
                 pst.executeUpdate();
@@ -73,7 +83,7 @@ public class SeanceDAOImpl implements SeanceDAO {
         }
     }
 
-
+    //получить сеанс по id
     @Override
     public Seance getSeance(int seanceId) throws SeanceDaoException {
         try(Connection connection = simpleConnection.getConnection();
@@ -94,25 +104,21 @@ public class SeanceDAOImpl implements SeanceDAO {
     }
 
     //собрать объект Seance из строки таблици Seances в базе данных
-    private Seance fillSeance (ResultSet resultSet) throws SQLException{
-        FilmDAO filmDAO = new FilmDAOImpl();
-        CinemaHallDAO cinemaHallDAO = new CinemaHallDAOImpl();
-        Seance seance = new Seance();
+    public Seance fillSeance (ResultSet resultSet) throws SQLException{
+        FilmService filmService = new FilmServiceImpl();
+        CinemaHallService cinemaHallService = new CinemaHallServiceImpl();
+        SeanceService seanceService = new SeanceServiceImpl();
+        Seance seance = seanceService.createSeance();
+
         seance.setId(resultSet.getInt("id"));
         seance.setStartSeance(resultSet.getTimestamp("start_time").toLocalDateTime());
         seance.setEndingSeance(resultSet.getTimestamp("ending_time").toLocalDateTime());
-        try {
-            Film film = filmDAO.getFilm(resultSet.getInt("film"));
-            seance.setFilm(film);
-        } catch (FilmDaoException e) {
-            e.printStackTrace();
-        }
-        try {
-            CinemaHall cinemaHall1 = cinemaHallDAO.getCinemaHall(resultSet.getInt("cinema_hall"));
-            seance.setCinemaHall(cinemaHall1);
-        } catch (CinemaHallDaoException e) {
-            e.printStackTrace();
-        }
+        Film film = filmService.createFilm();
+        film.setFilmId(resultSet.getInt("film"));
+        seance.setFilm(film);
+        CinemaHall cinemaHall = cinemaHallService.createCinemaHall();
+        cinemaHall.setId(resultSet.getInt("cinema_hall"));
+        seance.setCinemaHall(cinemaHall);
         seance.setPriceTicket(resultSet.getDouble("price"));
         return seance;
     }

@@ -7,8 +7,8 @@ import java.util.*;
  *расписание сеансов
  */
 public class Schedule {
-    private LocalDate date; // дата расписания
-    private ArrayList<Seance> seances = new ArrayList<Seance>(); //расписание сеансов на дату
+    private LocalDate date; // дата расписания (фильмы после полуночи относятся к этой дате)
+    private List<Seance> seances = new ArrayList<Seance>(); //расписание сеансов на дату
 
     public Schedule(LocalDate date){
         this.date = date;
@@ -19,12 +19,16 @@ public class Schedule {
         return date;
     }
 
-    public ArrayList<Seance> getSeances() {
+    public List<Seance> getSeances() {
         return seances;
     }
 
     public void addSeance (Seance seance){
         seances.add(seance);
+    }
+
+    public void setSeances(List<Seance> seances) {
+        this.seances = seances;
     }
 
     @Override

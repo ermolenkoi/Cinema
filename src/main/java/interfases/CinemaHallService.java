@@ -11,6 +11,7 @@ import java.util.Map;
 */
 public interface CinemaHallService {
     //создать новый зал по заданной схеме
-    CinemaHall createCinemaHall(HallName hallName, TypeVideo typeVideo, Map<Integer, Integer> scheme);
+    CinemaHall createCinemaHall(int id, TypeVideo typeVideo, Map<Integer, Integer> scheme);
+    CinemaHall createCinemaHall();
 
 }

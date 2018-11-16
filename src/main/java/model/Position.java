@@ -5,9 +5,10 @@ package model;
  **/
 
 public class Position {
-    private int row; //номер ряда
-    private int place; //номер места
-    private Status status; //статус меса - свободно/забронированно/занято
+    private int row;        //номер ряда
+    private int place;      //номер места
+    private Status status;  //статус меса - свободно/забронированно/занято
+
     public Position(int row, int place){
         this.row = row;
         this.place = place;
