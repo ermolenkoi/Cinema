@@ -54,10 +54,10 @@ public class SeanceDAOImpl implements SeanceDAO {
 
     //удалить сеанс из базы данных
     @Override
-    public void deleteSeance(int SeanceId) throws SeanceDaoException {
+    public void deleteSeance(int seanceId) throws SeanceDaoException {
         try(Connection connection = simpleConnection.getConnection();
             PreparedStatement pst = connection.prepareStatement(DELETE)){
-            pst.setInt(1, SeanceId);
+            pst.setInt(1, seanceId);
             pst.executeUpdate();
         }catch (Exception ex){
             throw new SeanceDaoException(ex);

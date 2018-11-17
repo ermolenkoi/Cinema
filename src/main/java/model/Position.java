@@ -5,6 +5,7 @@ package model;
  **/
 
 public class Position {
+    private int id;         //идентификационный номер места в зале
     private int row;        //номер ряда
     private int place;      //номер места
     private Status status;  //статус меса - свободно/забронированно/занято
@@ -13,11 +14,17 @@ public class Position {
         this.row = row;
         this.place = place;
         this.status = Status.FREE;
+        id = row * 100 + place;
     }
     public Position (int row, int place, Status st){
         this.row = row;
         this.place = place;
         this.status = st;
+        id = row * 100 + place;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public int getRow() {
@@ -44,14 +51,18 @@ public class Position {
 
         Position position = (Position) o;
 
+        if (id != position.id) return false;
         if (row != position.row) return false;
-        return place == position.place;
+        if (place != position.place) return false;
+        return status == position.status;
     }
 
     @Override
     public int hashCode() {
-        int result = row;
+        int result = id;
+        result = 31 * result + row;
         result = 31 * result + place;
+        result = 31 * result + (status != null ? status.hashCode() : 0);
         return result;
     }
 }
