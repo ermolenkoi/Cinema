@@ -1,7 +1,6 @@
 package services;
 
 import exceptions.PositionServiceExceptions;
-import interfases.PositionService;
 import model.Position;
 import model.Status;
 

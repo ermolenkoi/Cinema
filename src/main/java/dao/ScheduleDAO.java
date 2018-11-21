@@ -5,17 +5,17 @@ import model.Schedule;
 import model.Seance;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /*
  * интерфейс взаимодействия расписания с БД
  * */
 public interface ScheduleDAO {
-    //получить расписание из базы данных на заданную дату
-    Schedule getSchedule (LocalDate date) throws ScheduleDaoException;
+    //получить список id сеансов из базы данных на заданную дату
+    List<Long> getSchedule (LocalDate date) throws ScheduleDaoException;
     //добавить сеанс в расписание
-    Schedule addSeance (Schedule schedule, Seance seance) throws ScheduleDaoException;
-    //удалить сеанс в расписании по id
-    Schedule deleteSeance(Schedule schedule, int idSeance) throws ScheduleDaoException;
-    //изменить сеанс и вернуть расписание
-    Schedule updateSeance(Schedule schedule, Seance seance) throws ScheduleDaoException;
+    Schedule addSeance (Schedule schedule, Long idSeance) throws ScheduleDaoException;
+    //удалить сеанс из расписания
+    void deleteSeance (Schedule schedule, Long idSeance) throws ScheduleDaoException;
+
 }

@@ -4,15 +4,14 @@ import java.time.LocalDate;
 import java.util.*;
 
 /*
- *расписание сеансов
- */
+ * расписание сеансов
+ **/
 public class Schedule {
-    private LocalDate date; // дата расписания (фильмы после полуночи относятся к этой дате)
-    private List<Seance> seances = new ArrayList<Seance>(); //расписание сеансов на дату
+    private LocalDate date;        // дата расписания (фильмы после полуночи относятся к этой дате)
+    private List<Seance> seances;  // расписание сеансов на дату
 
     public Schedule(LocalDate date){
         this.date = date;
-
     }
 
     public LocalDate getDate() {
@@ -21,10 +20,6 @@ public class Schedule {
 
     public List<Seance> getSeances() {
         return seances;
-    }
-
-    public void addSeance (Seance seance){
-        seances.add(seance);
     }
 
     public void setSeances(List<Seance> seances) {

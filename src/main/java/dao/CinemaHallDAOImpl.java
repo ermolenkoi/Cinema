@@ -1,8 +1,7 @@
 package dao;
 
 import exceptions.CinemaHallDaoException;
-import exceptions.FilmDaoException;
-import interfases.CinemaHallService;
+import services.CinemaHallService;
 import model.CinemaHall;
 import model.HallName;
 import model.TypeVideo;
@@ -18,27 +17,24 @@ import java.util.Map;
 /*
  * сервис взаимодействия кинозала с БД
  * */
-public class CinemaHallDAOImpl implements CinemaHallDAO {
+public class CinemaHallDAOImpl extends BasicDAO implements CinemaHallDAO {
     private static final String SELECT_ALL_PLACES = "SELECT row, place FROM cinema_Hall_Scheme WHERE cinema_Hall=?";
     private static final String SELECT_TYPE_VIDEO = "SELECT type FROM cinema_Hall WHERE id=?";
-    private SimpleConnection simpleConnection = new SimpleConnection();
-
 
     @Override
     //получить зал по id
-    public CinemaHall getCinemaHall(int id) throws CinemaHallDaoException {
-        CinemaHallService cinemaHallService = new CinemaHallServiceImpl();
+    public CinemaHall getCinemaHall(long id) throws CinemaHallDaoException {
         Map<Integer,Integer> map = new HashMap<>();
             try(Connection connection = simpleConnection.getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_PLACES);){
-                preparedStatement.setInt(1, id);
+                preparedStatement.setLong(1, id);
                 try(ResultSet rs = preparedStatement.executeQuery();) {
                     while (rs.next()) {
                         map.put(rs.getInt("row"), rs.getInt("place"));
                     }
                 }
                 TypeVideo typeVideo = this.getTypeVideoCinemaHall(HallName.getHallName(id));
-                CinemaHall cinemaHall = cinemaHallService.createCinemaHall(id, typeVideo, map);
+                CinemaHall cinemaHall = new CinemaHall(id, typeVideo, map);
                 return cinemaHall;
             }catch (SQLException ex){
                 throw new CinemaHallDaoException(ex);
@@ -52,7 +48,7 @@ public class CinemaHallDAOImpl implements CinemaHallDAO {
             TypeVideo typeVideo = null;
             try(Connection connection = simpleConnection.getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement(SELECT_TYPE_VIDEO);){
-                preparedStatement.setInt(1, HallName.getNumHallName(hallName));
+                preparedStatement.setLong(1, HallName.getNumHallName(hallName));
                 ResultSet rs = preparedStatement.executeQuery();
                 if (rs.next()){
                     typeVideo = TypeVideo.getType(rs.getInt("type"));

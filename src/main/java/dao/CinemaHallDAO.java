@@ -10,9 +10,10 @@ import model.TypeVideo;
  * */
 public interface CinemaHallDAO {
     //получить зал по id
-    CinemaHall getCinemaHall (int id) throws CinemaHallDaoException;
+    CinemaHall getCinemaHall (long id) throws CinemaHallDaoException;
     //получить тип зала по имени
     TypeVideo getTypeVideoCinemaHall(HallName hallName) throws CinemaHallDaoException;
+    //
 
 
 }

@@ -1,3 +1,6 @@
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
     <body>
         <h2>Hello World!</h2>
@@ -5,5 +8,9 @@
         <a href="servlet">Click here to see servlet</a>
         <br/>
         <a href="getfilms">Click here to see all films</a>
+        <br/>
+        <a href="allInfo.jsp">Click here to see allInf.jsp</a>
+        <br/>
+        <a href="films.html">Страничка с фильмами</a>
     </body>
 </html>

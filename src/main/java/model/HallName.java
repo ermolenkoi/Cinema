@@ -10,13 +10,13 @@ public enum HallName {
     NUMBER_3(3), // зал обычного VIDEO
     NUMBER_4(4); // зал обычного VIDEO
 
-    int num = 0;
+    long num = 0;
 
-    HallName(int num) {
+    HallName(long num) {
         this.num = num;
     }
 
-    public static HallName getHallName(int num){
+    public static HallName getHallName(long num){
         for (HallName hn: HallName.values()){
             if (hn.num == num){
                 return hn;
@@ -25,7 +25,7 @@ public enum HallName {
         return null;
     }
 
-    public static int getNumHallName(HallName hallName){
+    public static long getNumHallName(HallName hallName){
         return hallName.num;
     }
 

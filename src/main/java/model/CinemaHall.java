@@ -7,18 +7,15 @@ import java.util.Map;
 /*
  * Зал кинотеатра с типом фильмв, набором мест. Всего 4 зала
  * */
-
 public class CinemaHall {
-    private int id;                                           //идентификационнфй номер зала
+    private long id;                                          //идентификационнфй номер зала
     private HallName name;                                    //название зала
     private TypeVideo type;                                   //тип задла IMAX/3D/VIDEO
     private List<Position> setPositions = new ArrayList<Position>(); //набор всех мест в зале
 
 
-    public CinemaHall(){
 
-    }
-    public CinemaHall(int id, TypeVideo type, Map<Integer, Integer> scheme){
+    public CinemaHall(long id, TypeVideo type, Map<Integer, Integer> scheme){
         this.id = id;
         this.name = HallName.getHallName(id);
         this.type = type;
@@ -27,20 +24,23 @@ public class CinemaHall {
 
     //создает набор мест по заданной схеме
     private List<Position> createSetPositions(Map<Integer, Integer> schema) {
-        List<Position> positions = new ArrayList<Position>();
-        for (Map.Entry<Integer, Integer> entry: schema.entrySet()){
-            for (int i = 1; i <= entry.getValue() ; i++) {
-                positions.add(new Position(entry.getKey(), i));
+        if (schema != null){
+            List<Position> positions = new ArrayList<Position>();
+            for (Map.Entry<Integer, Integer> entry: schema.entrySet()){
+                for (int i = 1; i <= entry.getValue() ; i++) {
+                    positions.add(new Position(entry.getKey(), i));
+                }
             }
+            return positions;
         }
-        return positions;
+        return null;
     }
 
     public void setName(HallName name) {
         this.name = name;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -52,7 +52,7 @@ public class CinemaHall {
         this.setPositions = setPlace;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
@@ -83,7 +83,7 @@ public class CinemaHall {
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = (int) (id ^ (id >>> 32));
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (type != null ? type.hashCode() : 0);
         result = 31 * result + (setPositions != null ? setPositions.hashCode() : 0);
@@ -93,10 +93,14 @@ public class CinemaHall {
     @Override
     public String toString() {
         StringBuilder positions = new StringBuilder();
-
-        for (Position p: setPositions){
-            positions.append("ряд №" + p.getRow() + " место№" + p.getPlace() + " " + p.getStatus() + "\n");
+        if (setPositions != null){
+            for (Position p: setPositions){
+                positions.append("ряд №" + p.getRow() + " место№" + p.getPlace() + " " + p.getStatus() + "\n");
+            }
+        } else {
+            positions.append("Зал не заполнен по схеме");
         }
+
 
         return positions.toString();
     }

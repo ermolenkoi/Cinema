@@ -25,7 +25,7 @@ public class SimpleConnection {
         Connection connection = null;
         String url = "jdbc:postgresql://localhost:5432/cinema";
         String login = "postgres";
-        String password = "postgres";
+        String password = "4rfv5tgb";
         try{
             connection = DriverManager.getConnection(url, login, password);
         }catch(SQLException ex){

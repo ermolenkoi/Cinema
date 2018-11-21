@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Список всех фильмов</title>
+
+        <script>
+            function loadFilms() {
+                var xhr = new XMLHttpRequest();
+                xhr.open('GET', 'getfilms', false);
+                xhr.send();
+                if (xhr.status != 200) {
+                    // обработать ошибку
+                    alert('Ошибка ' + xhr.status + ': ' + xhr.statusText);
+                } else {
+                    //return xhr.responseText;
+					return "adc"
+                }
+            }
+        </script>
+        <script>
+            function getFilms() {
+                var films = JSON.parse(loadFilms());
+
+                for (i=0, i <= films.length, i++){
+			    var film = document.createElement('div');
+                film.className = "film";
+                film.innerHtml = "123";
+                allFilms.appendChild(film);
+				}
+            }
+        </script>
+
+    </head>
+    <body onload="getFilms()">
+
+		<div>
+			<script>=loadFilms()</script>
+		</div>
+        <div id="allFilms">
+
+        </div>
+
+    </body>
+</html>

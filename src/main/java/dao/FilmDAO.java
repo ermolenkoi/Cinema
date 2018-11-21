@@ -14,11 +14,11 @@ public interface FilmDAO {
     //добавить новый фильм
     void addFilm(Film film) throws FilmDaoException;
     //удалить фильм из проката
-    void deleteFilm(int filmId) throws FilmDaoException;
+    void deleteFilm(long filmId) throws FilmDaoException;
     //получить список всех фильмов
     List<Film> getAllFilms() throws FilmDaoException;
     //получить фильм по id
-    Film getFilm(int filmId) throws FilmDaoException;
+    Film getFilm(long filmId) throws FilmDaoException;
     //изменить фильм
     void updateFilm(Film film) throws FilmDaoException;
 }

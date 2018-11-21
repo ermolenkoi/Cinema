@@ -1,4 +1,4 @@
-package interfases;
+package services;
 
 import exceptions.ScheduleServiceException;
 import model.HallName;
@@ -13,17 +13,16 @@ import java.util.List;
  * интерфейс для определения функций расписания
  */
 public interface ScheduleService {
-    //создать расписание на заданную дату
-    Schedule createSchedule (LocalDate date);
+    //получить расписание на заданную дату
+    Schedule getSchedule(LocalDate date) throws ScheduleServiceException;
+
     //добавить сеанс в расписание
-    Boolean addSeance(Schedule schedule, Seance seance) throws ScheduleServiceException;
-    //получить сеанс по id
-    Seance getSeance(Schedule schedule, int id);
-    //получить все сеансы расписания
-    List<Seance> getAllSeances (Schedule schedule) throws ScheduleServiceException;
+    Long addSeance(Schedule schedule, Seance seance) throws ScheduleServiceException;
+
     //изменить сеанс в расписании
     Boolean updateSchedule(Schedule schedule, Seance seance) throws ScheduleServiceException;
+
     //удалить сеанс из расписания
-    Schedule deleteSeance(Schedule schedule, Seance seance);
+    Schedule deleteSeance(Schedule schedule, Long idSeance) throws ScheduleServiceException;
 
 }

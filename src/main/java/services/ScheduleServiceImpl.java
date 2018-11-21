@@ -1,111 +1,122 @@
 package services;
 
 
+import dao.ScheduleDAO;
+import dao.ScheduleDAOImpl;
+import dao.SeanceDAO;
+import dao.SeanceDAOImpl;
+import exceptions.ScheduleDaoException;
 import exceptions.ScheduleServiceException;
-import model.HallName;
+import exceptions.SeanceDaoException;
 import model.Schedule;
 import model.Seance;
-import interfases.ScheduleService;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 /*
  * сервис управления расписанием
  * */
 public class ScheduleServiceImpl implements ScheduleService {
+    private ScheduleDAO scheduleDAO = new ScheduleDAOImpl();
+    private SeanceDAO seanceDAO = new SeanceDAOImpl();
 
-    //создать расписание
+    //получить расписание по дате
     @Override
-    public Schedule createSchedule(LocalDate date) {
-        if (date != null){
-            Schedule schedule = new Schedule(date);
-            return schedule;
+    public Schedule getSchedule(LocalDate date) throws ScheduleServiceException {
+        if (date != null) {
+            try {
+                List<Long> idSeances = scheduleDAO.getSchedule(date);
+                List<Seance> seances = seanceDAO.getSeancesByDate(date);
+                for (Seance s : seances) {
+                    if (idSeances.contains(s.getId())) {
+                        idSeances.remove(s.getId());
+                    } else {
+                        throw new ScheduleServiceException("Список сеансов на заданную дату не сходится" +
+                                " со списком сеансов в расписании");
+                    }
+                }
+                if (idSeances.size() == 0) {
+                    Schedule schedule = new Schedule(date);
+                    schedule.setSeances(seances);
+                    return schedule;
+                } else {
+                    throw new ScheduleServiceException("Список сеансов на заданную дату не сходится" +
+                            " со списком сеансов в расписании");
+                }
+            } catch (SeanceDaoException | ScheduleDaoException e) {
+                throw new ScheduleServiceException("На данную дату сеансов в расписании нет");
+            }
         }
         return null;
     }
 
     //добавить сеанс в расписание
     @Override
-    public Boolean addSeance(Schedule schedule ,Seance seance) throws ScheduleServiceException {
-        if (schedule != null && seance != null){
+    public Long addSeance(Schedule schedule, Seance seance) throws ScheduleServiceException {
+        if (schedule != null && seance != null) {
             Boolean flag = true;
             LocalDateTime startSeance = seance.getStartSeance();
             LocalDateTime endingSeance = seance.getEndingSeance();
-            for (Seance s: schedule.getSeances()){
-                if (s.getCinemaHall().getId() == seance.getCinemaHall().getId()){
-                    if (startSeance.equals(s.getStartSeance())){
+            for (Seance s : schedule.getSeances()) {
+                if (s.getCinemaHall().getId() == seance.getCinemaHall().getId()) {
+                    if (startSeance.equals(s.getStartSeance())) {
                         flag = false;
                         throw new ScheduleServiceException("В это время уже идет другой фильм");
                     }
-                    if (startSeance.isAfter(s.getStartSeance()) && startSeance.isBefore(s.getEndingSeance())){
+                    if (startSeance.isAfter(s.getStartSeance()) && startSeance.isBefore(s.getEndingSeance())) {
                         flag = false;
                         throw new ScheduleServiceException("В это время уже идет другой фильм");
                     }
-                    if (endingSeance.isAfter(s.getStartSeance()) && endingSeance.isBefore(s.getEndingSeance())){
+                    if (endingSeance.isAfter(s.getStartSeance()) && endingSeance.isBefore(s.getEndingSeance())) {
                         flag = false;
                         throw new ScheduleServiceException("В это время уже идет другой фильм");
                     }
                 }
             }
-            if (flag){
+            if (flag) {
                 schedule.getSeances().add(seance);
-            }
-            return flag;
-        }
-        return null;
-    }
-
-    //получить сеанс по id
-    @Override
-    public Seance getSeance(Schedule schedule ,int id) {
-        if (schedule != null){
-            List<Seance> seances = schedule.getSeances();
-            for (Seance s: seances){
-                if (s.getId() == id){
-                    return s;
+                try {
+                    Long idSeance = seanceDAO.addSeance(seance);
+                    scheduleDAO.addSeance(schedule, idSeance);
+                    return idSeance;
+                } catch (ScheduleDaoException | SeanceDaoException e) {
+                    e.printStackTrace();
                 }
-            }
-        }
-        return null;
-    }
 
-    //получить все сеансы расписания
-    @Override
-    public List<Seance> getAllSeances(Schedule schedule) throws ScheduleServiceException {
-        if (schedule != null){
-            return schedule.getSeances();
+            }
+            return null;
         }
         return null;
     }
 
     //изменить сеанс в расписании
     @Override
-    public Boolean updateSchedule(Schedule schedule, Seance seance) throws ScheduleServiceException{
-        if (schedule != null && seance != null){
+    public Boolean updateSchedule(Schedule schedule, Seance seance) throws ScheduleServiceException {
+        if (schedule != null && seance != null) {
             Boolean flag = true;
             LocalDateTime startSeance = seance.getStartSeance();
             LocalDateTime endingSeance = seance.getEndingSeance();
-            for (Seance s: schedule.getSeances()){
-                if (s.getCinemaHall().getId() == seance.getCinemaHall().getId() && s.getId() != seance.getId()){
-                    if (startSeance.isAfter(s.getStartSeance()) && startSeance.isBefore(s.getEndingSeance())){
+            for (Seance s : schedule.getSeances()) {
+                if (s.getCinemaHall().getId() == seance.getCinemaHall().getId() && s.getId() != seance.getId()) {
+                    if (startSeance.isAfter(s.getStartSeance()) && startSeance.isBefore(s.getEndingSeance())) {
                         flag = false;
                         throw new ScheduleServiceException("В это время уже идет другой фильм");
                     }
-                    if (endingSeance.isAfter(s.getStartSeance()) && endingSeance.isBefore(s.getEndingSeance())){
+                    if (endingSeance.isAfter(s.getStartSeance()) && endingSeance.isBefore(s.getEndingSeance())) {
                         flag = false;
                         throw new ScheduleServiceException("В это время уже идет другой фильм");
                     }
                 }
             }
-            if (flag){
-                Seance updateSeance = this.getSeance(schedule, seance.getId());
-                updateSeance.setCinemaHall(seance.getCinemaHall());
-                updateSeance.setFilm(seance.getFilm());
-                updateSeance.setStartSeance(seance.getStartSeance());
-                updateSeance.setEndingSeance(seance.getEndingSeance());
-                updateSeance.setPriceTicket(seance.getPriceTicket());
+            if (flag) {
+                try {
+                    seanceDAO.updateSeance(seance);
+                } catch (SeanceDaoException e) {
+                    throw new ScheduleServiceException(e);
+                }
             }
             return flag;
         }
@@ -114,12 +125,17 @@ public class ScheduleServiceImpl implements ScheduleService {
 
     //удалить сеанс из расписания
     @Override
-    public Schedule deleteSeance(Schedule schedule, Seance seance) {
-        if (schedule != null && seance != null){
+    public Schedule deleteSeance(Schedule schedule, Long idSeance) throws ScheduleServiceException {
+        if (schedule != null && idSeance != null) {
             List<Seance> seances = schedule.getSeances();
-            for (Seance s: seances){
-                if (s.equals(seance)){
-                    seances.remove(s);
+            for (Seance s : seances) {
+                if (s.getId() == idSeance) {
+                    try {
+                        scheduleDAO.deleteSeance(schedule, idSeance);
+                        seanceDAO.deleteSeance(idSeance);
+                    } catch (SeanceDaoException | ScheduleDaoException e) {
+                        throw new ScheduleServiceException(e);
+                    }
                 }
             }
             return schedule;

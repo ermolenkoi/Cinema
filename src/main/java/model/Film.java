@@ -1,30 +1,22 @@
 package model;
 
-import java.util.Calendar;
-
 /*
  * фильм добавляемый в прокат
  * */
-
 public class Film {
-    int filmId; //идентификатор фильма
-    private String name; // название фильма
-    private TypeVideo typeVideo; // формат фильма
-    private int duration; // продолжительность фильма в минутах
+    long filmId;                     // идентификатор фильма
+    private String name;             // название фильма
+    private TypeVideo typeVideo;     // формат фильма
+    private int duration;            // продолжительность фильма в минутах
 
-
-    public Film() {
-    }
-
-    public Film(int filmId, String name, TypeVideo typeVideo, int duration) {
+    public Film(long filmId, String name, TypeVideo typeVideo, int duration) {
         this.filmId = filmId;
         this.name = name;
         this.typeVideo = typeVideo;
         this.duration = duration;
     }
 
-    //геттеры
-    public int getFilmId() {
+    public long getFilmId() {
         return filmId;
     }
 
@@ -40,8 +32,8 @@ public class Film {
         return duration;
     }
 
-    //сеттеры
-    public void setFilmId(int filmId) {
+
+    public void setFilmId(long filmId) {
         this.filmId = filmId;
     }
 
@@ -73,7 +65,7 @@ public class Film {
 
     @Override
     public int hashCode() {
-        int result = filmId;
+        int result = (int) (filmId ^ (filmId >>> 32));
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (typeVideo != null ? typeVideo.hashCode() : 0);
         result = 31 * result + duration;
@@ -82,11 +74,9 @@ public class Film {
 
     @Override
     public String toString() {
-        return "Film{" +
-                "filmId=" + filmId +
-                ", name='" + name + '\'' +
-                ", typeVideo=" + typeVideo +
-                ", duration=" + duration +
-                '}';
+        return "filmId= " + filmId +
+                ", название='" + name + '\'' +
+                ", формат видео=" + typeVideo +
+                ", продолжительность=" + duration;
     }
 }

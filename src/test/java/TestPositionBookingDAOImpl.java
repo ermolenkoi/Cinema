@@ -3,7 +3,7 @@ import exceptions.CinemaHallDaoException;
 import exceptions.PositionBookingDaoException;
 import exceptions.PositionServiceExceptions;
 import exceptions.SeanceDaoException;
-import interfases.PositionService;
+import services.PositionService;
 import model.CinemaHall;
 import model.Position;
 import model.Seance;

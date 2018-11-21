@@ -14,7 +14,7 @@ import java.util.List;
 /*
  * сервис взаимодействия вильма с БД
  * */
-public class FilmDAOImpl implements FilmDAO {
+public class FilmDAOImpl extends BasicDAO implements FilmDAO {
 
     private static final String SELECT_ALL
             = "SELECT id, name, type, duration FROM films";
@@ -27,20 +27,18 @@ public class FilmDAOImpl implements FilmDAO {
     private static final String UPDATE
             = "UPDATE films SET name=?, type=?, duration=? WHERE id=?";
 
-    private SimpleConnection simpleConnection = new SimpleConnection();
-
     //добавить фильм в базу данных
     @Override
     public void addFilm(Film film) throws FilmDaoException {
-        if (film != null){
-            try(Connection connection = simpleConnection.getConnection();
-                PreparedStatement pst = connection.prepareStatement(INSERT)){
-                pst.setInt(1, film.getFilmId());
+        if (film != null) {
+            try (Connection connection = simpleConnection.getConnection();
+                 PreparedStatement pst = connection.prepareStatement(INSERT)) {
+                pst.setLong(1, film.getFilmId());
                 pst.setString(2, film.getName());
                 pst.setInt(3, TypeVideo.getNumType(film.getTypeVideo()));
                 pst.setInt(4, film.getDuration());
                 pst.executeUpdate();
-            }catch (SQLException ex){
+            } catch (SQLException ex) {
                 throw new FilmDaoException(ex);
             }
         }
@@ -48,27 +46,27 @@ public class FilmDAOImpl implements FilmDAO {
 
     //удалить фильм по id
     @Override
-    public void deleteFilm(int filmId) throws FilmDaoException{
-        try(Connection connection = simpleConnection.getConnection();
-            PreparedStatement pst = connection.prepareStatement(DELETE)){
-            pst.setInt(1, filmId);
+    public void deleteFilm(long filmId) throws FilmDaoException {
+        try (Connection connection = simpleConnection.getConnection();
+             PreparedStatement pst = connection.prepareStatement(DELETE)) {
+            pst.setLong(1, filmId);
             pst.executeUpdate();
-        }catch (Exception ex){
+        } catch (Exception ex) {
             throw new FilmDaoException(ex);
         }
     }
 
     //получить список всех фильмов
     @Override
-    public List<Film> getAllFilms() throws FilmDaoException{
+    public List<Film> getAllFilms() throws FilmDaoException {
         List<Film> films = new ArrayList<>();
-        try(Connection connection = simpleConnection.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL);
-            ResultSet resultSet = preparedStatement.executeQuery()){
-        while (resultSet.next()){
-            films.add(fillFilm(resultSet));
-        }
-        }catch (Exception ex){
+        try (Connection connection = simpleConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL);
+             ResultSet resultSet = preparedStatement.executeQuery()) {
+            while (resultSet.next()) {
+                films.add(fillFilm(resultSet));
+            }
+        } catch (Exception ex) {
             throw new FilmDaoException(ex);
         }
         return films;
@@ -76,19 +74,19 @@ public class FilmDAOImpl implements FilmDAO {
 
     //получить фильм по id
     @Override
-    public Film getFilm(int filmId) throws FilmDaoException {
-        try(Connection connection = simpleConnection.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ID);){
-            preparedStatement.setInt(1, filmId);
-            try(ResultSet resultSet =preparedStatement.executeQuery();){
-                while (resultSet.next()){
+    public Film getFilm(long filmId) throws FilmDaoException {
+        try (Connection connection = simpleConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ID);) {
+            preparedStatement.setLong(1, filmId);
+            try (ResultSet resultSet = preparedStatement.executeQuery();) {
+                while (resultSet.next()) {
                     return fillFilm(resultSet);
                 }
-            }catch (SQLException ex){
+            } catch (SQLException ex) {
                 throw new FilmDaoException(ex);
             }
 
-        }catch (Exception ex){
+        } catch (Exception ex) {
             throw new FilmDaoException(ex);
         }
         return null;
@@ -96,29 +94,27 @@ public class FilmDAOImpl implements FilmDAO {
 
     //изменить фильм
     @Override
-    public void updateFilm(Film film) throws FilmDaoException{
-        if (film != null){
-            try(Connection connection = simpleConnection.getConnection();
-                PreparedStatement pst = connection.prepareStatement(UPDATE)){
+    public void updateFilm(Film film) throws FilmDaoException {
+        if (film != null) {
+            try (Connection connection = simpleConnection.getConnection();
+                 PreparedStatement pst = connection.prepareStatement(UPDATE)) {
                 pst.setString(1, film.getName());
                 pst.setInt(2, TypeVideo.getNumType(film.getTypeVideo()));
                 pst.setInt(3, film.getDuration());
-                pst.setInt(4, film.getFilmId());
+                pst.setLong(4, film.getFilmId());
                 pst.executeUpdate();
-            }catch (Exception ex){
+            } catch (Exception ex) {
                 throw new FilmDaoException(ex);
             }
         }
     }
 
     //собрать объект Film из строки таблици films в базе данных
-    private Film fillFilm (ResultSet resultSet) throws SQLException{
-        Film film = new Film();
-        film.setFilmId(resultSet.getInt("id"));
-        film.setName(resultSet.getString("name"));
-        int type = resultSet.getInt("type");
-        film.setTypeVideo(TypeVideo.getType(type));
-        film.setDuration(resultSet.getInt("duration"));
-        return film;
+    private Film fillFilm(ResultSet resultSet) throws SQLException {
+        long id = resultSet.getLong("id");
+        String name = resultSet.getString("name");
+        TypeVideo type = TypeVideo.getType(resultSet.getInt("type"));
+        int duration = resultSet.getInt("duration");
+        return new Film(id, name, type, duration);
     }
 }

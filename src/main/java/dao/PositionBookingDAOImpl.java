@@ -27,11 +27,11 @@ public class PositionBookingDAOImpl implements PositionBookingDAO{
 
     //записать забронированную или выкупленную позицию в бд
     @Override
-    public void addPositionBooking(int seanceId, Position position) throws PositionBookingDaoException {
+    public void addPositionBooking(long seanceId, Position position) throws PositionBookingDaoException {
         if (position != null) {
             try (Connection connection = simpleConnection.getConnection();
                  PreparedStatement pst = connection.prepareStatement(INSERT)) {
-                pst.setInt(1, seanceId);
+                pst.setLong(1, seanceId);
                 pst.setInt(2, position.getId());
                 pst.setInt(3, position.getRow());
                 pst.setInt(4, position.getPlace());
@@ -45,10 +45,10 @@ public class PositionBookingDAOImpl implements PositionBookingDAO{
 
     //удалить из бызы даных забронированное или выкупленное место
     @Override
-    public void deletePositionBooking(int seanceId, int positionId) throws PositionBookingDaoException {
+    public void deletePositionBooking(long seanceId, int positionId) throws PositionBookingDaoException {
         try(Connection connection = simpleConnection.getConnection();
             PreparedStatement pst = connection.prepareStatement(DELETE)){
-            pst.setInt(1, seanceId);
+            pst.setLong(1, seanceId);
             pst.setInt(2, positionId);
             pst.executeUpdate();
         }catch (Exception ex){
@@ -58,11 +58,11 @@ public class PositionBookingDAOImpl implements PositionBookingDAO{
 
     //изменить статус забронированной позиции на выкупленную
     @Override
-    public void updatePositionBooking(int seanceId, int positionId) throws PositionBookingDaoException {
+    public void updatePositionBooking(long seanceId, int positionId) throws PositionBookingDaoException {
         try(Connection connection = simpleConnection.getConnection();
             PreparedStatement pst = connection.prepareStatement(UPDATE)) {
             pst.setInt(1, Status.getNumType(Status.CLOSED));
-            pst.setInt(2, seanceId);
+            pst.setLong(2, seanceId);
             pst.setInt(3, positionId);
             pst.executeUpdate();
         } catch (SQLException ex) {
@@ -72,11 +72,11 @@ public class PositionBookingDAOImpl implements PositionBookingDAO{
 
     //получить список всех не свободных мест по id сеанса
     @Override
-    public List<Position> getPositionBooking(int seanceId) throws PositionBookingDaoException {
+    public List<Position> getPositionBooking(long seanceId) throws PositionBookingDaoException {
         List<Position> positionsBooking = null;
         try(Connection connection = simpleConnection.getConnection();
             PreparedStatement pst = connection.prepareStatement(SELECT);){
-            pst.setInt(1, seanceId);
+            pst.setLong(1, seanceId);
             try(ResultSet resultSet = pst.executeQuery();){
                 positionsBooking = new ArrayList<>();
                 while (resultSet.next()){
