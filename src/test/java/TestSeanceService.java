@@ -30,10 +30,10 @@ public class TestSeanceService {
 
         try {
             //seanceService.addSeance(seance);
-            seance.setPriceTicket(300.00);
-            seanceService.updateSeance(seance);
+            //seance.setPriceTicket(300.00);
+            //seanceService.updateSeance(seance);
             System.out.println(seanceService.getSeance(6));
-            seanceService.deleteSeance(6);
+            //seanceService.deleteSeance(6);
         } catch (SeanceServiceException e) {
             e.printStackTrace();
         }

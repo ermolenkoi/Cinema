@@ -20,7 +20,16 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>GetFilms</servlet-name>
-        <url-pattern>/getfilms</url-pattern>
+        <url-pattern>/getFilms</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>getSchedule</servlet-name>
+        <servlet-class>servlets.GetSchedule</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getSchedule</servlet-name>
+        <url-pattern>/getSchedule</url-pattern>
     </servlet-mapping>
 
     <resource-ref>

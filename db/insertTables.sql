@@ -17,8 +17,9 @@ INSERT INTO cinema_hall_scheme (cinema_hall, row, place) VALUES (4, 1, 10), (4, 
 
 INSERT INTO Seances (start_time, ending_time, film, cinema_hall, price) VALUES ('2018-01-25 8:00', '2018-01-25 10:00', 1245, 4, 250.00);
 INSERT INTO Seances (start_time, ending_time, film, cinema_hall, price) VALUES ('2018-01-25 10:00', '2018-01-25 12:00', 1245, 4, 250.00);
-INSERT INTO Seances (start_time, ending_time, film, cinema_hall, price) VALUES ('2018-01-25 12:00', '2018-01-25 14:00', 1245, 4, 250.00);
-INSERT INTO Seances (start_time, ending_time, film, cinema_hall, price) VALUES ('2018-01-25 14:00', '2018-01-25 16:00', 1245, 4, 250.00);
+INSERT INTO Seances (start_time, ending_time, film, cinema_hall, price) VALUES ('2018-01-25 12:00', '2018-01-25 14:00', 1486, 4, 250.00);
+INSERT INTO Seances (start_time, ending_time, film, cinema_hall, price) VALUES ('2018-01-25 14:00', '2018-01-25 16:00', 1245, 3, 250.00);
+INSERT INTO Seances (start_time, ending_time, film, cinema_hall, price) VALUES ('2018-01-25 14:00', '2018-01-25 16:00', 1486, 3, 280.00);
 
 INSERT INTO Place_Status (id, status) VALUES (1, 'FREE');
 INSERT INTO Place_Status (id, status) VALUES (2, 'RESERVED');
@@ -34,3 +35,4 @@ INSERT INTO Schedule (date, id_Seance) VALUES ('2018-01-25', 1);
 INSERT INTO Schedule (date, id_Seance) VALUES ('2018-01-25', 2);
 INSERT INTO Schedule (date, id_Seance) VALUES ('2018-01-25', 3);
 INSERT INTO Schedule (date, id_Seance) VALUES ('2018-01-25', 4);
+INSERT INTO Schedule (date, id_Seance) VALUES ('2018-01-25', 5);

@@ -9,6 +9,9 @@ public class Film {
     private TypeVideo typeVideo;     // формат фильма
     private int duration;            // продолжительность фильма в минутах
 
+    public Film() {
+    }
+
     public Film(long filmId, String name, TypeVideo typeVideo, int duration) {
         this.filmId = filmId;
         this.name = name;

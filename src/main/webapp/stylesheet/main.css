@@ -1,0 +1,56 @@
+
+
+div#head {
+    height: 200px;
+    background: blue;
+}
+
+div#content{
+	background-color: gray
+}
+div.film {
+	display: table;
+	background-color: green;
+}
+
+h3.film-title {
+	margin: 0;
+	background-color: yellow;
+}
+
+p.film-genre {
+	margin: 1px 0 5px 0;
+	background-color: blue;
+}
+
+div.film-cinema {
+	
+	
+}
+
+div.film-seances {
+	
+	
+}
+
+div.film-seances-hall {
+	
+	
+}
+
+div.film-seances-item {
+	display: inline-block;
+	background-color: red;
+}
+
+
+
+div.film-poster {
+	display: table-cell;
+	vertical-align: top;
+}
+
+div.film-detail {
+	display: table-cell;
+	vertical-align: top;
+}

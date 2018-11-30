@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Кинотеатр</title>
+    <link href="../stylesheet/main.css" type="text/css" rel="stylesheet">
+    <script src="../scripts/getInfo.js"></script>
+
+</head>
+<body>
+    <div id="head">
+        <form action="javascript:;" onsubmit="loadSchedule(this)">
+            <input id="dateSchedule" type="date" name="date" value="2018-01-25">
+            <input type="submit">
+        </form>
+    </div>
+
+    <div id="content">
+        <div class="film">
+            <div class="film-poster">
+                <img src="../pic/poster.jpg" width="240" height="360">
+            </div>
+            <div class="film-detail">
+                <h3 class="film-title">Фантастические твари</h3>
+                <p class="film-genre">
+                    фэнтези, приключения, экшн
+                    <span class="age">12+</span>
+                </p>
+                <!--Все про фильм-->
+                <div class="film-cinema">
+                    <!--Все про зал-->
+                    <div class="film-seances">
+                        <div class="film-seances-hall">Зал №1</div>
+                        <!--Сеансы в этом зале-->
+                        <div class="film-seances-item">
+                            <a class="seance">9:00</a>
+                            <div class="seance-price">250</div>
+                            <div class="seance-format">3D</div>
+                        </div>
+                        <div class="film-seances-item">
+                            <a class="seance">11:00</a>
+                            <div class="seance-price">250</div>
+                            <div class="seance-format">3D</div>
+                        </div>
+                        <div class="film-seances-item">
+                            <a class="seance">13:30</a>
+                            <div class="seance-price">250</div>
+                            <div class="seance-format">3D</div>
+                        </div>
+                    </div>
+                    <div class="film-seances">
+                        <div class="film-seances-hall">Зал №2</div>
+                        <!--Сеансы в этом зале-->
+                        <div class="film-seances-item">
+                            <a class="seance">9:00</a>
+                            <div class="seance-price">250</div>
+                            <div class="seance-format">3D</div>
+                        </div>
+                        <div class="film-seances-item">
+                            <a class="seance">11:00</a>
+                            <div class="seance-price">250</div>
+                            <div class="seance-format">3D</div>
+                        </div>
+                        <div class="film-seances-item">
+                            <a class="seance">13:30</a>
+                            <div class="seance-price">250</div>
+                            <div class="seance-format">3D</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="bottom_panel">
+
+    </div>
+</body>
+</html>

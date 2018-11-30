@@ -7,10 +7,12 @@
         <br/>
         <a href="servlet">Click here to see servlet</a>
         <br/>
-        <a href="getfilms">Click here to see all films</a>
+        <a href="getFilms">Click here to see all films</a>
         <br/>
         <a href="allInfo.jsp">Click here to see allInf.jsp</a>
         <br/>
         <a href="films.html">Страничка с фильмами</a>
+        <br/>
+        <a href="pages/headPage.html">Главная страничка</a>
     </body>
 </html>
